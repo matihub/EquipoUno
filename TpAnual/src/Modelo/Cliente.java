@@ -1,4 +1,4 @@
-package Modelo;
+package negocio.objetos;
 
 import java.io.Serializable;
 

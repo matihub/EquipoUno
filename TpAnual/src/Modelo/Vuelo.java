@@ -1,4 +1,4 @@
-package Modelo;
+package negocio.objetos;
 
 import java.io.Serializable;
 
@@ -7,7 +7,7 @@ public class Vuelo implements Serializable {
 	private static final long serialVersionUID = 8896868831124347675L;
 	
 	private int id;
-	private Avion Avion;
+	private int id_avion;
 	private String nro_vuelo;
 	private String fecha_hora;
 	
@@ -18,12 +18,11 @@ public class Vuelo implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	public Avion getAvion() {
-		return Avion;
+	public int getId_avion() {
+		return id_avion;
 	}
-	public void setAvion(Avion avion) {
-		Avion = avion;
+	public void setId_avion(int id_avion) {
+		this.id_avion = id_avion;
 	}
 	public String getNro_vuelo() {
 		return nro_vuelo;
@@ -37,8 +36,8 @@ public class Vuelo implements Serializable {
 	public void setFecha_hora(String fecha_hora) {
 		this.fecha_hora = fecha_hora;
 	}
-	//public static long getSerialversionuid() {
-	//	return serialVersionUID;
-	//}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 }

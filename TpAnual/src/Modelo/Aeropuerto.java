@@ -1,10 +1,11 @@
-package Modelo;
+package src.Modelo;
+
 
 import java.io.Serializable;
 
 //public class Aeropuerto implements Serializable {
-public class Aeropuerto {
-//	private static final long serialVersionUID = -977326194551887029L;
+public class Aeropuerto{
+	//private static final long serialVersionUID = -977326194551887029L;
 	
 	private String nombre;
 	private String pais;

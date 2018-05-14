@@ -1,4 +1,4 @@
-package Modelo;
+package negocio.objetos;
 
 import java.io.Serializable;
 
@@ -10,7 +10,7 @@ public class Avion implements Serializable {
 	private int cant_asientos;
 	private String nombre;
 	private String modelo;
-	private Aeropuerto aeropuerto;
+	private String nombre_aeropuerto;
 	
 	public int getId() {
 		return id;
@@ -44,17 +44,11 @@ public class Avion implements Serializable {
 		this.modelo = modelo;
 	}
 
-	public Aeropuerto getAeropuerto() {
-		return aeropuerto;
+	public String getNombre_aeropuerto() {
+		return nombre_aeropuerto;
 	}
 
-	public void setAeropuerto(Aeropuerto aeropuerto) {
-		this.aeropuerto = aeropuerto;
+	public void setNombre_aeropuerto(String nombre_aeropuerto) {
+		this.nombre_aeropuerto = nombre_aeropuerto;
 	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-
 }
