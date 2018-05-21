@@ -1,28 +1,83 @@
 package Modelo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Cliente implements Serializable {
 
-	private static final long serialVersionUID = 2910710803462989429L;
+//	private static final long serialVersionUID = 2910710803462989429L;
 	
-	private int id;
+	
 	private String nombre;
 	private String apellido;
 	private String dni;
-	private String direccion;
+	private String cuil;
+	private PasajeroFrecuente psjfrec;
+	private Direccion direccion;
 	private String email;
-	private String telefono;
-	private String nro_pasaporte;
+	private Date fechanac;
+	private Telefono telefono;
+	private Pasaporte nro_pasaporte;
 	
-	public int getId() {
-		return id;
+
+	public Cliente(String nombre, String apellido, String dni, String cuil, PasajeroFrecuente psjfrec,
+			Direccion direccion, String email, Date fechanac, Telefono telefono, Pasaporte nro_pasaporte) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.dni = dni;
+		this.cuil = cuil;
+		this.psjfrec = psjfrec;
+		this.direccion = direccion;
+		this.email = email;
+		this.fechanac = fechanac;
+		this.telefono = telefono;
+		this.nro_pasaporte = nro_pasaporte;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public Cliente() {
+		// TODO Auto-generated constructor stub
+	}
+	public Cliente() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getCuil() {
+		return cuil;
+	}
+	public void setCuil(String cuil) {
+		this.cuil = cuil;
+	}
+	public PasajeroFrecuente getPsjfrec() {
+		return psjfrec;
+	}
+	public void setPsjfrec(PasajeroFrecuente psjfrec) {
+		this.psjfrec = psjfrec;
+	}
+	public Date getFechanac() {
+		return fechanac;
+	}
+	public void setFechanac(Date fechanac) {
+		this.fechanac = fechanac;
+	}
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+	public void setTelefono(Telefono telefono) {
+		this.telefono = telefono;
+	}
+	public void setNro_pasaporte(Pasaporte nro_pasaporte) {
+		this.nro_pasaporte = nro_pasaporte;
 	}
 	public String getNombre() {
 		return nombre;
+	}
+	public Direccion getDireccion() {
+		return direccion;
+	}
+	public Telefono getTelefono() {
+		return telefono;
+	}
+	public Pasaporte getNro_pasaporte() {
+		return nro_pasaporte;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
@@ -39,32 +94,12 @@ public class Cliente implements Serializable {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	public String getDireccion() {
-		return direccion;
-	}
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
-	}
+	
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getTelefono() {
-		return telefono;
-	}
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
-	public String getNro_pasaporte() {
-		return nro_pasaporte;
-	}
-	public void setNro_pasaporte(String nro_pasaporte) {
-		this.nro_pasaporte = nro_pasaporte;
-	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
+	
 }
