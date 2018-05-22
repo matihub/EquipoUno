@@ -6,6 +6,10 @@ public class Pasaporte implements Serializable {
 //agregar los atrubutos gfeter setter y consytructores 
 //Kagregar la clase vuelos y ventas con los atrubtos fijate le tema de las relaciones que ahya algunas que lleva otros objetos
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String nroPasaporte;
 	private String nacionalidad;
 	private String sexoPers;

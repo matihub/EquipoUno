@@ -3,6 +3,7 @@ package Modelo;
 public class Aerolinea {
   private String nombre;
   private String alianza;
+  
   public Aerolinea(String nombre, String alianza, Vuelo vuelo) {
 	super();
 	this.nombre = nombre;
