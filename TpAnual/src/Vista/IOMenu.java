@@ -12,16 +12,30 @@ public class IOMenu {
 		
 		boolean ok=false;
 		int opcion=0;
-		es.pritln("\nSeleccione una opcion.");
-		es.pritln("1c.consulta de habitaciones");
-		es.pritln("2d.registro de huespedes");
-		es.pritln("3d.registro de consumos");
-		es.pritln("4e.consulta de consumos");
-		es.pritln("5f.registrar salida");//
-		es.pritln("6g.generar cupones");
+		EntradaSalida.pritln("~~~~~~~~~~~~~~~~~~~~TP ANUAL ---VENTA DE VUELOS~~~~~~~~~~~~~~~~~~~~~~~");
+		EntradaSalida.pritln("\nSeleccione una opcion.");
+		es.pritln("1c.consulta de Clientes");
+		es.pritln("2d. alta de Clientes");
+		es.pritln("3d.modificar cliente");
+		
+		EntradaSalida.pritln("------------------------");
+		es.pritln("4e.Consulta de vuelos");
+		es.pritln("5f.alta de nuevo vuelo");//
+		es.pritln("6g.eliminar vuelo");
+		
+		es.pritln("------------------------");
+		
+		es.pritln("4e.Consulta de aerolinea");
+		es.pritln("5f.alta de nueva aerolinea");//
+		es.pritln("6g.eliminar aerolinea");
+		
+		es.pritln("------------------------");
+		es.pritln("4e.Consulta de ventas");
+		es.pritln("5f.alta de nueva ventas");//
+		es.pritln("6g.eliminar ventas");
 		
 		es.pritln("4.Salir");
-		opcion= es.getDouble("ingrese opcion");
+		opcion= es.leerInt("ingrese opcion", "ingrese un valos de la lista valido");
 		
 		if (opcion>=1 && opcion <=6){
 			ok=true;
