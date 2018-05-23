@@ -12,6 +12,7 @@ public PasajeroFrecuente(String alianza, Aerolinea lineaaerea, String numero, St
 	this.lineaaerea = lineaaerea;
 	this.numero = numero;
 	this.categoria = categoria;
+}
 
 public String getAlianza() {
 	return alianza;
