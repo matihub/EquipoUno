@@ -6,29 +6,25 @@ import java.text.ParseException;
 import java.util.Calendar;
 
 import DAO.ClienteData;
-import DAO.CuponesData;
 import Vista.EntradaSalida;
-import modelo.Habitacion;
-import modelo.Huesped;
+import Modelo.Cliente;
 
-public class IOHuesped {
+public class IOCliente {
+	
 	EntradaSalida es = new EntradaSalida();
-	ClienteData cl = new ClienteData();
-	IOHuesped iohue = new IOHuesped();
-	Huesped h = new Huesped();
-//	CuponesData cd=new CuponesData();
-	public Huesped buscarhuesped (int dni ) throws ParseException{
+	
+	public Cliente buscarCliente (int dni ) throws ParseException{
 		try {
-			   h = cl.obtenerhuespedes(dni);
+			   h = cl.obtenerClientees(dni);
 			   if (h.equals(null)){
-				   throw new Exception ("no existe el huesped");
+				   throw new Exception ("no existe el Cliente");
 			   }
 			   
 			   
 			  } catch (Exception e) {
 			   // TODO: handle exception
-			   es.print("se debe ingresar huesped");
-			   h = iohue.ingresarHuesped();
+			   es.pritln("se debe ingresar Cliente");
+			   c = iohue.ingresarCliente();
 			    cl.guardarClientes(h);
 			  }	
 		return h;
@@ -39,14 +35,14 @@ public class IOHuesped {
 	
 
 
-	public Huesped ingresarHuesped() {
+	public Cliente ingresarCliente() {
 		// TODO Auto-generated method stub
-		Huesped h = new Huesped();
-		int dni = es.getEntero("ingrese dni");
-		String nombre = es.getCadena("ingrese nombre");
-		String apellido = es.getCadena("ingrese apellido");
+		Cliente c = new Cliente();
+		int dni = es.leerInt("ingrese dni","ingrese dni valido");
+		String nombre = es.leerLinea("ingrese nombre");
+		String apellido = es.leerLinea("ingrese apellido");
 		Calendar fechanac = Calendar.getInstance();
-		es.print("ingrese fecha de nacimiento ");
+		es.pritln("ingrese fecha de nacimiento ");
 		int d= es.getEntero("Ingrese dia");
 		int m= es.getEntero("Ingrese mes");
 		int a= es.getEntero("Ingrese año");
@@ -63,13 +59,13 @@ public class IOHuesped {
 		
 		
 		
-		h.setApellido(apellido);
-		h.setNombre(nombre);
-		h.setDni(dni);
-		h.setFechanac(fechanac);
+		c.setApellido(apellido);
+		c.setNombre(nombre);
+		c.setDni(dni);
+		c.setFechanac(fechanac);
 			
 		
-		return h;
+		return c;
 	}
 
 

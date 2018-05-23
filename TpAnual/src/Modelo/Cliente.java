@@ -7,6 +7,7 @@ public class Cliente implements Serializable {
 
 //	private static final long serialVersionUID = 2910710803462989429L;
 	
+	
 	private String nombre;
 	private String apellido;
 	private String dni;
@@ -36,6 +37,7 @@ public class Cliente implements Serializable {
 	public Cliente() {
 		// TODO Auto-generated constructor stub
 	}
+
 	public String getCuil() {
 		return cuil;
 	}
