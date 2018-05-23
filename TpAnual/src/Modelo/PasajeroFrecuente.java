@@ -12,13 +12,7 @@ public PasajeroFrecuente(String alianza, Aerolinea lineaaerea, String numero, St
 	this.lineaaerea = lineaaerea;
 	this.numero = numero;
 	this.categoria = categoria;
-}
-public PasajeroFrecuente(String string, String string2) {
-	// TODO Auto-generated constructor stub
-}
-public PasajeroFrecuente(String string, String string2) {
-	// TODO Auto-generated constructor stub
-}
+
 public String getAlianza() {
 	return alianza;
 }
