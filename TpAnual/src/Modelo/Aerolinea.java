@@ -10,6 +10,7 @@ public class Aerolinea {
 	this.vuelo = vuelo;
 }
 private Vuelo vuelo;
+
 public String getNombre() {
 	return nombre;
 }
