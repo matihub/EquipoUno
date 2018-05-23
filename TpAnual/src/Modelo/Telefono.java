@@ -4,18 +4,14 @@ public class Telefono {
       private String nropersonal;
       private String nrocelular;
       private String nrolaboral;
+      
 	public Telefono(String nropersonal, String nrocelular, String nrolaboral) {
 		super();
 		this.nropersonal = nropersonal;
 		this.nrocelular = nrocelular;
 		this.nrolaboral = nrolaboral;
 	}
-	public Telefono(String nropersonal2, String nrocelular2, String nrolaboral2) {
-		// TODO Auto-generated constructor stub
-	}
-	public Telefono(String nropersonal2, String nrocelular2, String nrolaboral2) {
-		// TODO Auto-generated constructor stub
-	}
+
 	public String getNropersonal() {
 		return nropersonal;
 	}

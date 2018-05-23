@@ -37,9 +37,7 @@ public class Cliente implements Serializable {
 	public Cliente() {
 		// TODO Auto-generated constructor stub
 	}
-	public Cliente() {
-		// TODO Auto-generated constructor stub
-	}
+
 	public String getCuil() {
 		return cuil;
 	}
