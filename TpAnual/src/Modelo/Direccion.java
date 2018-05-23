@@ -18,12 +18,7 @@ public class Direccion {
 		this.pais = pais;
 		this.codigopostal = codigopostal;
 	}
-	public Direccion(String calle2, String altura2, String ciudad2, String provincia2, String pais2, String string) {
-		// TODO Auto-generated constructor stub
-	}
-	public Direccion(String calle2, String altura2, String ciudad2, String provincia2, String pais2, String string) {
-		// TODO Auto-generated constructor stub
-	}
+
 	public String getCalle() {
 		return calle;
 	}
