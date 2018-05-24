@@ -5,7 +5,7 @@ import persistencia.dao.interfaces.VueloDAO;
 
 public class VueloFactory {
 
-	public VueloDAO getImplementation(String s) {
+	public VueloDAOImpleFile getImplementation(String s) {
 		if (s.equals("jdbc")) {
 			return new VueloDAOJDBCImpl();
 		}

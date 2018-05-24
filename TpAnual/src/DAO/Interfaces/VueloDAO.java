@@ -1,26 +1,18 @@
 package DAO.Interfaces;
 
-
-
 import java.util.ArrayList;
+import java.util.List;
 
 import Modelo.Vuelo;
 
 public interface VueloDAO {
-
-	public Vuelo getVuelo(int id_vuelo);
-
-	public Vuelo buscarVuelo(String search);
-
-	public ArrayList<Vuelo> getVuelos();
-
-	public boolean addVuelo(Vuelo vuelo);
-
-	public boolean removeVuelo(int id_vuelo);
-
-	public boolean modifyVuelo(Vuelo vuelo);
-
-}
+	
+	public boolean create(List<Vuelo> Vuelo);
+    public List<Vuelo> findAll();
+    public Vuelo findByName(String name);
+    public boolean update(Vuelo Vuelo, Vuelo VueloUpdated);
+    public boolean delete(Vuelo Vuelo);
+    }
 
 
 
