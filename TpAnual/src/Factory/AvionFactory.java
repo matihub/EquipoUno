@@ -1,7 +1,6 @@
-package negocio.objetos.factory;
+package Factory;
 
-import persistencia.dao.implementacion.JDBC.AvionDAOJDBCImpl;
-import persistencia.dao.interfaces.AvionDAO;
+import DAO.Implement.AvionDAO;
 
 public class AvionFactory {
 
