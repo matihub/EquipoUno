@@ -1,13 +1,12 @@
-package negocio.objetos.factory;
+package Factory;
 
-import persistencia.dao.implementacion.JDBC.VentaDAOJDBCImpl;
-import persistencia.dao.interfaces.VentaDAO;
+import DAO.Implement.VentaDAO;
 
 public class VentaFactory {
 
 	public VentaDAO getImplementation(String s) {
 		if (s.equals("jdbc")) {
-			return new VentaDAOJDBCImpl();
+			return new VentaDAO();
 		}
 		return null;
 	}

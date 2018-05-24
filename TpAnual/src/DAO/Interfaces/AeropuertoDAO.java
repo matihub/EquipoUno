@@ -1,6 +1,7 @@
 package DAO.Interfaces;
 
 import java.util.ArrayList;
+import Modelo.Aeropuerto;
 
 import Modelo.Aeropuerto;
 

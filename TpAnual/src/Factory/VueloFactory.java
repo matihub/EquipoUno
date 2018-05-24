@@ -1,13 +1,12 @@
-package negocio.objetos.factory;
+package Factory;
 
-import persistencia.dao.implementacion.JDBC.VueloDAOJDBCImpl;
-import persistencia.dao.interfaces.VueloDAO;
+import DAO.Implement.VueloDAOImpleFile;
 
 public class VueloFactory {
 
 	public VueloDAOImpleFile getImplementation(String s) {
 		if (s.equals("jdbc")) {
-			return new VueloDAOJDBCImpl();
+			return new VueloDAOImpleFile();
 		}
 		return null;
 	}
