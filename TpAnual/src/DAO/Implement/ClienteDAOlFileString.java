@@ -155,4 +155,13 @@ public class ClienteDAOlFileString implements ClienteDAO{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+
+
+
+	@Override
+	public Cliente buscarCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
