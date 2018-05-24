@@ -3,10 +3,12 @@ package Controlador;
 
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import DAO.Interfaces.ClienteDAO;
+import Factory.ClienteFactory;
 import Vista.EntradaSalida;
 import Modelo.Cliente;
 
@@ -19,7 +21,7 @@ public class IOCliente {
 	
 	public Cliente buscarCliente (int dni ) throws ParseException{
 		try {
-			   clilist = clienteDAO.getAllCliente();
+			   cliList = clienteDAO.getAllCliente();
 			   if (cliList.contains(null)){
 				   throw new Exception ("no existen cliente");
 			   }else {
