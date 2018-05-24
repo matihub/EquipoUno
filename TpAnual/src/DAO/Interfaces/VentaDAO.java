@@ -2,18 +2,14 @@ package DAO.Interfaces;
 
 import java.util.ArrayList;
 
-import Modelo.Venta;
+import Modelo.Ventas;
 
 public interface VentaDAO {
 
-	public Venta getVenta(int id_venta);
-
-	public Venta buscarVenta(String search);
-
-	public ArrayList<Venta> getVentas();
-
-	public boolean addVenta(Venta venta);
-
+	public Ventas getVenta(int id_venta);
+	public Ventas buscarVenta(String search);
+	public ArrayList<Ventas> getVentas();
+	public boolean addVenta(Ventas venta);
 	public boolean removeVenta(int id_venta);
 
 }
