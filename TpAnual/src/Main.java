@@ -31,28 +31,27 @@ public class Main {
 		int dni;
 		int opcion;
 		boolean fin = false;
-		  control.IOConsumos iocons = new IOConsumos();
-		List<Reserva> r = new ArrayList<Reserva>();
-	//	 Reserva rl = new Reserva();
-		 IOReserva ior = new IOReserva();
-	//	 Huesped hues = new Huesped();
-		 IOHabitacion ioh = new IOHabitacion();
-		IOHuesped ioc = new  IOHuesped();
-	//		HabitacionData hdata= new HabitacionData();
-		  
+		ClienteDAO clienteDAO = new ClienteFactory().getImplementation("String");
+		AvionDAO avionDAO = new AvionFactory().getImplementation("String");
+		AeropuertoDAO aeropuertoDAO = new AeropuertoFactory().getImplementation("String");
+		VueloDAO vueloDAO = new VueloFactory().getImplementation("String");
+		VentaDAO ventaDAO = new VentaFactory().getImplementation("String");
+		IOCliente ioc = new IOCliente();
+		EntradaSalida es = new EntradaSalida();
+		frame = new FramePrincipal(clienteDAO,avionDAO,aeropuertoDAO,vueloDAO,ventaDAO);
 		
 	
 		while(!fin){
 	//desplega el menu de opciones a elegir de la clase IOmenu
 			opcion = menu.mostraropciones();
-			es.printfloat(opcion);
+			
 			switch(opcion){
 				case 1:
 	//
 				
 				//	h=hdata.getHabitacion();
-					ioh.mostrarhabitacion();
-					es.print("\nleido hotel.");
+					ioc.buscarCliente(es.leerInt("ingrese dni del cliente", "Dni Invalido"));
+					es.pritln("\nleido hotel.");
 					
 	
 					break;

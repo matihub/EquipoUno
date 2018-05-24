@@ -11,7 +11,7 @@ public interface ClienteDAO {
 
 	public Cliente getCliente(int clie_id);
 	
-	public Cliente buscarCliente(String search);
+	public Cliente buscarCliente();
 
 	public ArrayList<Cliente> getClientes();
 

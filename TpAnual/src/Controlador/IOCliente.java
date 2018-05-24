@@ -4,20 +4,27 @@ package Controlador;
 
 import java.text.ParseException;
 import java.util.Calendar;
+import java.util.List;
 
-import DAO.ClienteData;
+import DAO.Interfaces.ClienteDAO;
 import Vista.EntradaSalida;
 import Modelo.Cliente;
 
 public class IOCliente {
 	
 	EntradaSalida es = new EntradaSalida();
+	List <Cliente> cliList = new ArrayList<Cliente>();
+	Cliente cl = new Cliente();
+	ClienteDAO clienteDAO = new ClienteFactory().getImplementation("String");
 	
 	public Cliente buscarCliente (int dni ) throws ParseException{
 		try {
-			   h = cl.obtenerClientees(dni);
-			   if (h.equals(null)){
-				   throw new Exception ("no existe el Cliente");
+			   clilist = clienteDAO.getAllCliente();
+			   if (cliList.contains(null)){
+				   throw new Exception ("no existen cliente");
+			   }else {
+				  es.pritln(cliList.iterator());
+				   
 			   }
 			   
 			   
@@ -27,7 +34,7 @@ public class IOCliente {
 			   c = iohue.ingresarCliente();
 			    cl.guardarClientes(h);
 			  }	
-		return h;
+		return cl;
 				
 	}
 	
