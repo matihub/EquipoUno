@@ -1,6 +1,7 @@
 package Modelo;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Cliente implements Serializable {
@@ -15,13 +16,13 @@ public class Cliente implements Serializable {
 	private PasajeroFrecuente psjfrec;
 	private Direccion direccion;
 	private String email;
-	private Date fechanac;
+	private Calendar fechanac;
 	private Telefono telefono;
 	private Pasaporte nro_pasaporte;
 	
 
 	public Cliente(String nombre, String apellido, String dni, String cuil, PasajeroFrecuente psjfrec,
-			Direccion direccion, String email, Date fechanac, Telefono telefono, Pasaporte nro_pasaporte) {
+			Direccion direccion, String email, Calendar fechanac, Telefono telefono, Pasaporte nro_pasaporte) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -50,11 +51,11 @@ public class Cliente implements Serializable {
 	public void setPsjfrec(PasajeroFrecuente psjfrec) {
 		this.psjfrec = psjfrec;
 	}
-	public Date getFechanac() {
+	public Calendar getFechanac() {
 		return fechanac;
 	}
-	public void setFechanac(Date fechanac) {
-		this.fechanac = fechanac;
+	public void setFechanac(Calendar fechanac2) {
+		this.fechanac = fechanac2;
 	}
 	public void setDireccion(Direccion direccion) {
 		this.direccion = direccion;
@@ -89,8 +90,8 @@ public class Cliente implements Serializable {
 	public String getDni() {
 		return dni;
 	}
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setDni(int dni2) {
+		this.dni = dni2;
 	}
 	
 	public String getEmail() {

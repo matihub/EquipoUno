@@ -65,8 +65,16 @@ public class ClienteDAOImplFileStream implements ClienteDAO {
 		return false;
 	}
 
+
+
 	@Override
-	public boolean modifyCliente(Cliente cli) {
+	public Cliente buscarCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean modifyCliente(List<Cliente> cli) {
 		// TODO Auto-generated method stub
 		return false;
 	}

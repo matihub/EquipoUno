@@ -29,7 +29,7 @@ public class ClienteDAOlFileString implements ClienteDAO{
 
 	public boolean addCliente(Cliente cliente) throws FileNotFoundException, IOException {
 		boolean verif = true ; 
-		file = new File("C:\\Archivos\\Clientes.dat");
+		file = new File("C:\\Clientes.txt");
 		fw = new FileWriter(file, true);
 		bw = new BufferedWriter(fw);
 		bw.write(this.ClienteToString(cliente));
@@ -41,9 +41,40 @@ public class ClienteDAOlFileString implements ClienteDAO{
 
 
 
-	public void updateCliente(Cliente cliente) throws FileNotFoundException, IOException {
+	@Override
+	public boolean modifyCliente(List<Cliente> cli) {
+		// TODO Auto-generated method stub
 		
+		String ruta=("C:\\Users\\moncerra\\Desktop\\usal 1er cuatri 2017\\prg avanzada\\guia5\\Guia07\\archivos\\fixture4.txt");
+		//llama al writer y al buffer y escribe lo que se encuentra en cada posicion del array
+		 String fechapartido="";
+	
+		try{
+		
+			File f= new File(ruta);
+			f.createNewFile();
+			FileWriter fw=new FileWriter(f);
+			BufferedWriter bf=new BufferedWriter(fw);
+		
+			for (int i = 0; i < cli.size(); i++) {
+				
+			
+			      bf.write(this.ClienteToString(cli.get(i)));
+			
+				}
+
+	
+			bf.close();
+			fw.close();
+			
+			return true;
+		}
+		catch (Exception e){
+			return false;
+		}
 	}
+	
+	
 
 	
 	public void deleteCliente(Cliente cliente) throws FileNotFoundException, IOException {
@@ -84,18 +115,18 @@ public class ClienteDAOlFileString implements ClienteDAO{
 	private static Cliente StringToCliente(String strCliente){
 		String[] straux = strCliente.split(";");
 		Cliente cliente = new Cliente();
-		cliente.setDni(straux[0]);
+		cliente.setDni(Integer.parseInt(straux[0]));
 		cliente.setNombre(straux[1]);
 		cliente.setApellido(straux[2]);
 		cliente.setCuil(straux[3]);
 		cliente.setEmail(straux[4]);
-		cliente.setFechanac(Date.valueOf(straux[5]));
+//		cliente.setFechanac(Date.valueOf(straux[5]));
 		Telefono tel = new Telefono((straux[6]),straux[7],straux[8]);
 		cliente.setTelefono(tel);
-		PasajeroFrecuente pf = new PasajeroFrecuente(straux[9],straux[10]);
-		cliente.setPsjfrec(pf);
-		Direccion dir = new Direccion(straux[11],straux[12],straux[13],straux[14],straux[15],straux[16]);
-		cliente.setDireccion(dir);
+	//	PasajeroFrecuente pf = new PasajeroFrecuente(straux[9],straux[10]);
+//		cliente.setPsjfrec(pf);
+	//	Direccion dir = new Direccion(straux[11],straux[12],straux[13],straux[14],straux[15],straux[16]);
+//		cliente.setDireccion(dir);
 		
 		
 		return cliente;
@@ -141,11 +172,6 @@ public class ClienteDAOlFileString implements ClienteDAO{
 
 
 
-	@Override
-	public boolean modifyCliente(Cliente cli) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 
 

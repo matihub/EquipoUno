@@ -19,11 +19,13 @@ public interface ClienteDAO {
 
 	public boolean removeCliente(int clie_id);
 
-	public boolean modifyCliente(Cliente cli);
+	public boolean modifyCliente(List<Cliente> cli);
 	
 	public int getTotalCount();
 
-	List<Cliente> getAllCliente() throws FileNotFoundException, IOException;
+	public List<Cliente> getAllCliente() throws FileNotFoundException, IOException;
+
+	Cliente buscarCliente(String search);
 
 }
 

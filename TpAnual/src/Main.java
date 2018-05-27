@@ -9,6 +9,8 @@ import java.util.List;
 import Vista.EntradaSalida;
 import Vista.IOMenu;
 import Controlador.*;
+import DAO.Interfaces.ClienteDAO;
+import Factory.ClienteFactory;
 import Modelo.*;
 
 
@@ -32,14 +34,13 @@ public class Main {
 		int opcion;
 		boolean fin = false;
 		ClienteDAO clienteDAO = new ClienteFactory().getImplementation("String");
-		AvionDAO avionDAO = new AvionFactory().getImplementation("String");
-		AeropuertoDAO aeropuertoDAO = new AeropuertoFactory().getImplementation("String");
-		VueloDAO vueloDAO = new VueloFactory().getImplementation("String");
-		VentaDAO ventaDAO = new VentaFactory().getImplementation("String");
+	//	AvionDAO avionDAO = new AvionFactory().getImplementation("String");
+	//	AeropuertoDAO aeropuertoDAO = new AeropuertoFactory().getImplementation("String");
+	//	VueloDAO vueloDAO = new VueloFactory().getImplementation("String");
+	//	VentaDAO ventaDAO = new VentaFactory().getImplementation("String");
 		IOCliente ioc = new IOCliente();
-		EntradaSalida es = new EntradaSalida();
-		frame = new FramePrincipal(clienteDAO,avionDAO,aeropuertoDAO,vueloDAO,ventaDAO);
-		
+	
+
 	
 		while(!fin){
 	//desplega el menu de opciones a elegir de la clase IOmenu
@@ -47,46 +48,26 @@ public class Main {
 			
 			switch(opcion){
 				case 1:
-	//
-				
-				//	h=hdata.getHabitacion();
-					ioc.buscarCliente(es.leerInt("ingrese dni del cliente", "Dni Invalido"));
+					ioc.consultarCliente(es.leerInt("ingrese dni del cliente", "Dni Invalido"));
 					es.pritln("\nleido hotel.");
 					
-	
 					break;
-					
-					
-			
 				case 2 :
-					dni = es.getEntero("ingrese dni del huesped");
-			//		 hues= ioc.buscarhuesped(dni);
-				
-					 ior.ingresarReserva(dni);
-					
-					
-					
-				
-				
+					ioc.ingresarCliente();
+				    break;
 				case 3:
-					int habitacion = es.getEntero("ingrese habitacion a consultar");
-					iocons.consultaconsumos(habitacion,r);
-					 habitacion = es.getEntero("ingrese habitacion a ingresar consumo");
-					iocons.ingresarconsumo(habitacion,r);
-					
-					
+					ioc.actualizarcliente();			
+					break;
 				case 4:
-					 habitacion = es.getEntero("ingrese habitacion a liberar");
-					ior.liberarreserva(habitacion,r);
-				    
-					
+					ioc.borrarcliente();
+					break;
 				case 5:
-					 habitacion = es.getEntero("generar cupones");
-					ior.generarcupon(r);
+		//			 habitacion = es.getEntero("generar cupones");
+		//			ior.generarcupon(r);
 					
 				case 6:
 					fin = true;
-					es.print("Fin del programa.");
+					es.pritln("Fin del programa.");
 					break;			
 	}
 			
