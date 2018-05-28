@@ -69,16 +69,21 @@ public class VentaDAOImpleFileString implements VentaDAO{
 		return verif;
 	}
 
-	@Override
-	public boolean removeVenta(int id_venta) {
-		// TODO Auto-generated method stub
+	public boolean removeVenta(Ventas venta) throws FileNotFoundException, IOException {
 		return false;
+		
 	}
 	
 	
 	private static String VentaToString(Ventas venta){
 		return venta.getVentaNumero()+ ";" + venta.getPrecioTotal()+ ";" + venta.getClienteNumero()+ ";" + venta.getPrecioUnit()+ "\n";
 		
+	}
+
+	@Override
+	public boolean removeVenta(int id_venta) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	 
 	
