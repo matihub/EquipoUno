@@ -20,7 +20,7 @@ public class Vuelo {
 	public Vuelo() {
 	}
 	
-	private Aerolinea aerolinea;
+	private Aeropuerto aeropuerto;
 
 	public String getNroVuelo() {
 		return nroVuelo;

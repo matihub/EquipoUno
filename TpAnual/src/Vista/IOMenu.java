@@ -17,7 +17,7 @@ public class IOMenu {
 		es.pritln("1c.consulta de Clientes");
 		es.pritln("2d. alta de Clientes");
 		es.pritln("3d.modificar cliente");
-		es.pritln("3d.borrar cliente");
+		es.pritln("5d.borrar cliente");
 		
 		EntradaSalida.pritln("------------------------");
 		es.pritln("4e.Consulta de vuelos");

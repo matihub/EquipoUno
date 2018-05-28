@@ -1,16 +1,19 @@
 package Modelo;
 
+import java.util.List;
+
 public class Aerolinea {
   private String nombre;
   private String alianza;
+  private List<Vuelo> vuelo;
   
-  public Aerolinea(String nombre, String alianza, Vuelo vuelo) {
+  public Aerolinea(String nombre, String alianza, List<Vuelo> vuelo) {
 	super();
 	this.nombre = nombre;
 	this.alianza = alianza;
 	this.vuelo = vuelo;
 }
-private Vuelo vuelo;
+
 
 public String getNombre() {
 	return nombre;
@@ -24,10 +27,10 @@ public String getAlianza() {
 public void setAlianza(String alianza) {
 	this.alianza = alianza;
 }
-public Vuelo getVuelo() {
+public List<Vuelo> getVuelo() {
 	return vuelo;
 }
-public void setVuelo(Vuelo vuelo) {
+public void setVuelo(List<Vuelo> vuelo) {
 	this.vuelo = vuelo;
 }
 }
