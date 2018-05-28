@@ -17,12 +17,13 @@ public class IOMenu {
 		es.pritln("1c.consulta de Clientes");
 		es.pritln("2d. alta de Clientes");
 		es.pritln("3d.modificar cliente");
-		es.pritln("5d.borrar cliente");
+		es.pritln("4d.borrar cliente");
 		
 		EntradaSalida.pritln("------------------------");
-		es.pritln("4e.Consulta de vuelos");
-		es.pritln("5f.alta de nuevo vuelo");//
-		es.pritln("6g.eliminar vuelo");
+		es.pritln("6.Consulta de vuelos");
+		es.pritln("7.alta de nuevo vuelo");//
+		es.pritln("7.modificar de nuevo vuelo");//
+		es.pritln("8.eliminar vuelo");
 		
 		es.pritln("------------------------");
 		

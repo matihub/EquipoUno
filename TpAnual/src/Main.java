@@ -63,8 +63,8 @@ public class Main {
 					ioc.borrarcliente();
 					break;
 				case 5:
-		//			 habitacion = es.getEntero("generar cupones");
-		//			ior.generarcupon(r);
+	
+		
 					
 				case 6:
 					fin = true;
