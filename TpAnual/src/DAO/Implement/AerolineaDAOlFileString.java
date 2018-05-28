@@ -128,8 +128,20 @@ public class AerolineaDAOlFileString implements AerolineaDAO{
 
 	@Override
 	public Aerolinea buscarAerolinea(String search) {
-		// TODO Auto-generated method stub
-		return null;
+		Aerolinea aer = new Aerolinea();
+		file = new File("C:\\Archivos\\Aerolineas"+search+".txt");
+		try {
+			sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		while(sc.hasNextLine()){
+			aer = StringToAerolinea(sc.nextLine());
+		}
+		
+		return aer;
+	
 	}
 
 

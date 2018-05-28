@@ -10,24 +10,23 @@ import java.util.List;
 import java.util.Scanner;
 
 import DAO.Interfaces.VueloDAO;
-import Modelo.Vuelo;
-import Modelo.Direccion;
-import Modelo.PasajeroFrecuente;
-import Modelo.Telefono;
+import DAO.Interfaces.AerolineaDAO;
+
 import Modelo.Vuelo;
 
 public class VueloDAOlFileString implements VueloDAO {
 
 	
 	private File file;
+	private File directorio;
 	private FileWriter fw;
 	private BufferedWriter bw;
 	private Scanner sc;
-	
+	private AerolineaDAOlFileString aer;
 
 	public boolean addVuelo(Vuelo Vuelo) throws FileNotFoundException, IOException {
 		boolean verif = true ; 
-		file = new File("C:\\Vuelos.txt");
+		file = new File("C:\\Vuelos"+Vuelo.getNroVuelo()+".txt");
 		fw = new FileWriter(file, true);
 		bw = new BufferedWriter(fw);
 		bw.write(this.VueloToString(Vuelo));
@@ -40,12 +39,12 @@ public class VueloDAOlFileString implements VueloDAO {
 
 
 	@Override
-	public boolean modifyVuelo(List<Vuelo> cli) {
+	public boolean modifyVuelo(Vuelo vue) {
 		// TODO Auto-generated method stub
 		
-		String ruta=("C:\\Vuelo"+.txt");
+		String ruta=("C:\\Vuelo"+vue.getNroVuelo()+".txt");
 		//llama al writer y al buffer y escribe lo que se encuentra en cada posicion del array
-		 String fechapartido="";
+		
 	
 		try{
 		
@@ -54,14 +53,9 @@ public class VueloDAOlFileString implements VueloDAO {
 			FileWriter fw=new FileWriter(f);
 			BufferedWriter bf=new BufferedWriter(fw);
 		
-			for (int i = 0; i < cli.size(); i++) {
-				
+			      bf.write(this.VueloToString(vue));
 			
-			      bf.write(this.VueloToString(cli.get(i)));
 			
-				}
-
-	
 			bf.close();
 			fw.close();
 			
@@ -82,49 +76,40 @@ public class VueloDAOlFileString implements VueloDAO {
 	@Override
 	public List<Vuelo> getAllVuelo() throws FileNotFoundException, IOException {
 		List<Vuelo> list = new ArrayList<Vuelo>();
-		file = new File("C:\\Archivos\\Vuelos.dat");
+	
+		directorio = new File("C:\\Archivos\\Vuelos.dat");
+		String[] arregloArchivos = directorio.list();
+		int numArchivos = arregloArchivos.length;
+	    for (int i = 0; i < arregloArchivos.length; i++) {
+			
+	    	file = new File(arregloArchivos[i]);
 		sc = new Scanner(file);
 		while(sc.hasNextLine()){
 			list.add(StringToVuelo(sc.nextLine()));
 		}
-		
+	    }
 		return list;
 	}
 	
 	private static String VueloToString(Vuelo Vuelo){
-		return Vuelo.getDni()+ ";" + Vuelo.getNombre() + ";" + Vuelo.getApellido() + ";" + Vuelo.getCuil() + ";" + Vuelo.getEmail() + ";" + Vuelo.getFechanac() + ";" + TelefonoToString(Vuelo.getTelefono()) + ";" + pasajerofrecuentetoStroing(Vuelo.getPsjfrec()) + ";" + Vuelo.getDireccion() + "\n";
+		return Vuelo.getNroVuelo()+ ";" + Vuelo.getLugarOrigen() + ";" + Vuelo.getLugarDestino() + ";" + Vuelo.getHoraSalida() + ";" + Vuelo.getHoraLlegada()+ ";" + Vuelo.getAerolinea().getNombre()+ "\n";
 		
 	}
 	
-	private static String TelefonoToString(Telefono t){
-		return t.getNrocelular()+";" +t.getNrolaboral()+";"+t.getNropersonal()+ "\n";
-		
-	}
-	private static String pasajerofrecuentetoStroing(PasajeroFrecuente pjf){
-		return pjf.getAlianza()+";"+pjf.getCategoria()+";"+pjf.getNumero()+ "\n";
-		
-	}
 	
-	private static String DirecciontoStroing(Direccion dir){
-		return dir.getAltura()+";"+dir.getCalle()+";"+dir.getCiudad()+";"+dir.getCodigopostal()+";"+dir.getPais()+";"+dir.getProvincia()+ "\n";
-		
-	}
+	
+	
 	
 	private static Vuelo StringToVuelo(String strVuelo){
+		AerolineaDAOlFileString aer = new AerolineaDAOlFileString();
 		String[] straux = strVuelo.split(";");
 		Vuelo Vuelo = new Vuelo();
-		Vuelo.setDni(Integer.parseInt(straux[0]));
-		Vuelo.setNombre(straux[1]);
-		Vuelo.setApellido(straux[2]);
-		Vuelo.setCuil(straux[3]);
-		Vuelo.setEmail(straux[4]);
-//		Vuelo.setFechanac(Date.valueOf(straux[5]));
-		Telefono tel = new Telefono((straux[6]),straux[7],straux[8]);
-		Vuelo.setTelefono(tel);
-	//	PasajeroFrecuente pf = new PasajeroFrecuente(straux[9],straux[10]);
-//		Vuelo.setPsjfrec(pf);
-	//	Direccion dir = new Direccion(straux[11],straux[12],straux[13],straux[14],straux[15],straux[16]);
-//		Vuelo.setDireccion(dir);
+		Vuelo.setNroVuelo(straux[0]);
+		Vuelo.setLugarOrigen(straux[1]);
+		Vuelo.setLugarDestino(straux[2]);
+		Vuelo.setHoraSalida(straux[3]);
+		Vuelo.setHoraLlegada(straux[4]);
+        Vuelo.setAerolinea(aer.buscarAerolinea(straux[5]));
 		
 		
 		return Vuelo;
