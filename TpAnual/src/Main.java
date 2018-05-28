@@ -50,7 +50,7 @@ public class Main {
 			switch(opcion){
 				case 1:
 					ioc.consultarCliente(es.leerInt("ingrese dni del cliente", "Dni Invalido"));
-					es.pritln("\nleido hotel.");
+					es.pritln("\nLeido.");
 					
 					break;
 				case 2 :
