@@ -74,8 +74,10 @@ public class AerolineaDAOImplFileStream implements AerolineaDAO {
 	}
 
 	@Override
-	public boolean modifyAerolinea(List<Aerolinea> cli) {
+	public boolean modifyAerolinea(Aerolinea aer) {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	
 }

@@ -90,15 +90,17 @@ public class Cliente implements Serializable {
 	public String getDni() {
 		return dni;
 	}
-	public void setDni(int dni2) {
-		this.dni = dni2;
-	}
+
 	
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public void setDni(int parseInt) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

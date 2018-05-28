@@ -11,7 +11,7 @@ import util.*;
 
 
 
-public class VueloDAOImpleFile implements VueloDAO {
+public class VueloDAOImplFileStream implements VueloDAO {
 	
     private String root;
 

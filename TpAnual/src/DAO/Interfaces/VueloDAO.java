@@ -1,16 +1,33 @@
 package DAO.Interfaces;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
+import Modelo.Vuelo;
 import Modelo.Vuelo;
 
 public interface VueloDAO {
 	
-	public boolean create(List<Vuelo> Vuelo);
-    public List<Vuelo> findAll();
-    public Vuelo findByName(String name);
-    public boolean update(Vuelo Vuelo, Vuelo VueloUpdated);
-    public boolean delete(Vuelo Vuelo);
+	public Vuelo getVuelo(int vue_id);
+	
+	public Vuelo buscarVuelo();
+
+	public ArrayList<Vuelo> getVuelos();
+
+	public boolean addVuelo(Vuelo vue) throws FileNotFoundException, IOException;
+
+	public boolean removeVuelo(int vue_id);
+
+	public boolean modifyVuelo(Vuelo vue);
+	
+	public int getTotalCount();
+
+	public List<Vuelo> getAllVuelo() throws FileNotFoundException, IOException;
+
+	Vuelo buscarVuelo(String search);
+
     }
 
 

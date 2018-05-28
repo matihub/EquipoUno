@@ -3,7 +3,7 @@ package Modelo;
 import java.util.List;
 
 public class Aerolinea {
-  private String nombre;
+  private static String nombre;
   private String alianza;
   private List<Vuelo> vuelo;
   
@@ -15,13 +15,18 @@ public class Aerolinea {
 }
 
 
-public String getNombre() {
+public Aerolinea() {
+	// TODO Auto-generated constructor stub
+}
+
+
+public static String getNombre() {
 	return nombre;
 }
 public void setNombre(String nombre) {
 	this.nombre = nombre;
 }
-public String getAlianza() {
+public static String getAlianza() {
 	return alianza;
 }
 public void setAlianza(String alianza) {
