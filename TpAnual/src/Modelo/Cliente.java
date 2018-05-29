@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 public class Cliente implements Serializable {
 
 //	private static final long serialVersionUID = 2910710803462989429L;
@@ -22,14 +24,15 @@ public class Cliente implements Serializable {
 	
 
 	public Cliente(String nombre, String apellido, String dni, String cuil, PasajeroFrecuente psjfrec,
-			Direccion direccion, String email, Calendar fechanac, Telefono telefono, Pasaporte nro_pasaporte) {
+			String calle, String altura,String  ciudad, String provincia, String pais, int codigopostal, String email, Calendar fechanac, Telefono telefono, Pasaporte nro_pasaporte) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.dni = dni;
 		this.cuil = cuil;
 		this.psjfrec = psjfrec;
-		this.direccion = direccion;
+	//	this.direccion = direccion;
+		Direccion dir = new Direccion(calle, altura, ciudad, provincia, pais, codigopostal);
 		this.email = email;
 		this.fechanac = fechanac;
 		this.telefono = telefono;

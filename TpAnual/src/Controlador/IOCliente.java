@@ -77,6 +77,8 @@ public class IOCliente {
 		fechanac.set(Calendar.MONTH, m-1);
 		fechanac.set(Calendar.YEAR, a);
         
+		String 
+		
 		
 		
 		//ingresarcupon 
@@ -88,7 +90,13 @@ public class IOCliente {
 		c.setApellido(apellido);
 		c.setNombre(nombre);
 		c.setDni(dni);
+		c.getCuil();
+		c.getDireccion();
+		c.getEmail()
 		c.setFechanac(fechanac);
+		c.setNro_pasaporte():
+		c.setPsjfrec();
+		c.setTelefono()
 			
 		
 		return c;

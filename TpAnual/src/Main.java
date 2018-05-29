@@ -54,7 +54,7 @@ public class Main {
 					
 					break;
 				case 2 :
-					ioc.ingresarCliente();
+					clienteDAO.addCliente(ioc.ingresarCliente());
 				    break;
 				case 3:
 					ioc.actualizarcliente();			
