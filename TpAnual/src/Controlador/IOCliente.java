@@ -38,7 +38,7 @@ public class IOCliente {
 			   
 			  } catch (Exception e) {
 			   // TODO: handle exception<
-			   EntradaSalida.pritln("se debe ingresar Cliente");
+			   EntradaSalida.pritln("no existe archivo clientes");
 			 
             	}
 	}
