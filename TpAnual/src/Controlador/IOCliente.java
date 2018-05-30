@@ -182,7 +182,7 @@ public class IOCliente {
     private Aerolinea ingresarAerolinea() {
          	Aerolinea aer = new Aerolinea();
 		    es.pritln("----seleccioner Aerolinea----");
-		     
+		    
 		      
 		return aer;
 	}

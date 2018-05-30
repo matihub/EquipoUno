@@ -119,7 +119,7 @@ public class IOAerolinea {
     	
     }
 
-     public int  mostrarAerolineastxt() {
+     public String  mostrarAerolineastxt() {
     	 int opcion =0;
     		ArrayList<String> l = new ArrayList<String>();
     	     l = AerolineaDAO.aeroparametrica();
@@ -129,7 +129,7 @@ public class IOAerolinea {
 			    es.pritln(i+"-"+l.get(i)+"/n"); 
 		}
     	      opcion=es.leerInt("ingrese opcion", "opcion invalida");
-		return opcion;
+		return l.;
      }
 
 	
