@@ -162,7 +162,25 @@ public class AerolineaDAOlFileString implements AerolineaDAO{
 		
 	}
 
+	public ArrayList<String> getalianza(){
+		ArrayList<String> l = new ArrayList<String>();
+		file = new File("C:\\Archivos\\Alianza.txt");
+		try {
+			sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		while(sc.hasNextLine()){
+			l.add(sc.nextLine());
+		}
+		return l
+				
+				;}
 
+	
+	
+	
 	@Override
 	public ArrayList<Aerolinea> getAerolineas() {
 		// TODO Auto-generated method stub

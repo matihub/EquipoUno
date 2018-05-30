@@ -10,6 +10,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import DAO.Interfaces.AerolineaDAO;
+import DAO.Interfaces.VueloDAO;
 import Factory.AerolineaFactory;
 import Vista.EntradaSalida;
 import Modelo.Aerolinea;
@@ -70,51 +71,36 @@ public class IOAerolinea {
 
 	public Aerolinea ingresarAerolinea() {
 		// TODO Auto-generated method stub
-		Aerolinea c = new Aerolinea();
-		int dni = es.leerInt("ingrese dni","ingrese dni valido");
-		String nombre = es.leerLinea("ingrese nombre");
-		String apellido = es.leerLinea("ingrese apellido");
-		Calendar fechanac = Calendar.getInstance();
-		es.pritln("ingrese fecha de nacimiento ");
-		int d= es.leerInt("Ingrese dia","ingrese dia valido");
-		int m= es.leerInt("Ingrese mes","ingrese dia valido");
-		int a= es.leerInt("Ingrese año","ingrese dia valido");
-		
-		fechanac.set(Calendar.DATE, d);
-		fechanac.set(Calendar.MONTH, m-1);
-		fechanac.set(Calendar.YEAR, a);
-        
+		Aerolinea a = new Aerolinea();
+		a.setNombre(mostrarAerolineastxt());
+		a.setAlianza(recuperarAlianza());
+        boolean pr =es.leerboolean("desea ingresar vuelo? true/false","opcion invalida");
+        if (pr) {
+			a.setVuelo(VueloDAO.ingresarvuelo());
+		} else {
+            a.setVuelo(null); 
+		}
 		
 		
-		//ingresarcupon 
-		//int numero = (int) (Math.random() * 100) + 1;
-		//if (numero )
-		
-		
-		
-		c.setApellido(apellido);
-		c.setNombre(nombre);
-		c.setDni(dni);
-		c.setFechanac(fechanac);
 			
 		
-		return c;
+		return a;
 	}
 
     public void borrarAerolinea() throws FileNotFoundException, IOException {
     	
-    	int dni= es.leerInt("Ingresar dni a borrar", "dni invalido");
-    	cliList= AerolineaDAO.getAllAerolinea();
-    	for (int i = 0; i < cliList.size(); i++) {
-		 if (cliList.get(i).getDni().equals(dni)) {
+    	String nom = es.leerFrase("ingrese aerolinea a eliminar");
+    	aerList= AerolineaDAO.getAllAerolinea();
+    	for (int i = 0; i < aerList.size(); i++) {
+		 if (aerList.equals(nom)) {
 			 
-			 cliList.remove(i);
+			 aerList.remove(i);
 			 
 			
 		} else {
             es.pritln("no se encuentra el Aerolinea a buscar");    
 		}
-		 AerolineaDAO.modifyAerolinea(cliList);
+		 AerolineaDAO.modifyAerolinea(aerList);
 		}
     	
     }
@@ -129,10 +115,21 @@ public class IOAerolinea {
 			    es.pritln(i+"-"+l.get(i)+"/n"); 
 		}
     	      opcion=es.leerInt("ingrese opcion", "opcion invalida");
-		return l.;
+		return l.get(opcion);
      }
 
-	
+	public String recuperarAlianza() {
+		ArrayList<String> l = new ArrayList<String>();
+		es.pritln("alianzas selecciones una opcion");
+		l = AerolineaDAO.getalianza();
+		for (int i = 0; i < l.size(); i++) {
+			es.pritln(i+"--"+l.get(i));
+		}
+		int opcion = es.leerInt("seleccione una opcion", "opcion invalida");
+		return l.get(opcion);
+		
+		
+	}
 }
 
 

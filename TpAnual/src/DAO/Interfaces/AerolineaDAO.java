@@ -13,6 +13,8 @@ public interface AerolineaDAO {
 	
 	public ArrayList<String> aeroparametrica();
 	
+	public ArrayList<String> getalianza();
+	
 	public Aerolinea buscarAerolinea();
 
 	public ArrayList<Aerolinea> getAerolineas();

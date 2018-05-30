@@ -28,6 +28,11 @@ public interface VueloDAO {
 
 	Vuelo buscarVuelo(String search);
 
+	public static List<Vuelo> ingresarvuelo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
     }
 
 
