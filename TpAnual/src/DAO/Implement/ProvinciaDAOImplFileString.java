@@ -22,11 +22,21 @@ public class ProvinciaDAOImplFileString implements ProvinciaDAO{
 	
 	public List<Provincia> getAllProvincia() throws FileNotFoundException, IOException {
 		List<Provincia> list = new ArrayList<Provincia>();
-		file = new File("C:\\Provincia\\Provincia.txt");
-		sc = new Scanner(file);
+		file = new File("C:\\archivos\\provincia\\Provincias.txt");
+		try {
+			sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			
+			e.printStackTrace();
+		}
 		while(sc.hasNextLine()){
 			list.add(StringToProvincia(sc.nextLine()));
 		}
+		
+		
+		
+		
 		
 		return list;
 	}
@@ -38,7 +48,7 @@ public class ProvinciaDAOImplFileString implements ProvinciaDAO{
 			Provincia provincia = new Provincia();
 			
 			provincia.setId(Integer.parseInt(straux[0]));
-			provincia.setProvincia(straux[2]);
+			provincia.setProvincia(straux[1]);
 			
 			
 			return provincia;

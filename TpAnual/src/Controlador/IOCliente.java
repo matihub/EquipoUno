@@ -105,8 +105,6 @@ public class IOCliente {
 		
 		c.setDireccion(ingresardireccion());
 		c.setTelefono(ingresarTelefono());
-		c.setApellido(apellido);
-		c.setNombre(nombre);
 		c.setDni(dni);
 		c.setCuil(cuil);
 		c.setEmail(mail);
@@ -114,7 +112,7 @@ public class IOCliente {
 		c.setNro_pasaporte(p);
 		
 			
-		
+		es.pritln("nuevo cliente generado");
 		return c;
 	}
 
@@ -164,7 +162,8 @@ public class IOCliente {
     	Telefono t = new Telefono();
     	t.setNrocelular(es.leerFrase("ingrese numero celular"));
     	t.setNrolaboral(es.leerFrase("ingrese numero laboral"));
-    	t.setNropersonal("ingrese numero laboral");
+    	t.setNropersonal(es.leerFrase("ingrese numero personal"));
+    	
     	return t;
     }
     

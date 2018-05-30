@@ -29,7 +29,7 @@ public class ClienteDAOlFileString implements ClienteDAO{
 
 	public boolean addCliente(Cliente cliente) throws FileNotFoundException, IOException {
 		boolean verif = true ; 
-		file = new File("C:\\Clientes.txt");
+		file = new File("C:\\archivos\\clientes.txt");
 		fw = new FileWriter(file, true);
 		bw = new BufferedWriter(fw);
 		bw.write(this.ClienteToString(cliente));
@@ -45,7 +45,7 @@ public class ClienteDAOlFileString implements ClienteDAO{
 	public boolean modifyCliente(List<Cliente> cli) {
 		// TODO Auto-generated method stub
 		
-		String ruta=("C:\\Users\\moncerra\\Desktop\\usal 1er cuatri 2017\\prg avanzada\\guia5\\Guia07\\archivos\\fixture4.txt");
+		String ruta=("C:\\archivos\\clientes.txt");
 		//llama al writer y al buffer y escribe lo que se encuentra en cada posicion del array
 		 String fechapartido="";
 	
@@ -84,7 +84,7 @@ public class ClienteDAOlFileString implements ClienteDAO{
 	@Override
 	public List<Cliente> getAllCliente() throws FileNotFoundException, IOException {
 		List<Cliente> list = new ArrayList<Cliente>();
-		file = new File("C:\\Archivos\\Clientes.dat");
+		file = new File("C:\\Archivos\\Clientes.txt");
 		sc = new Scanner(file);
 		while(sc.hasNextLine()){
 			list.add(StringToCliente(sc.nextLine()));

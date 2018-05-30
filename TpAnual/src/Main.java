@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.List;
 
 
+
 import Vista.EntradaSalida;
 import Vista.IOMenu;
 import Controlador.*;
@@ -49,15 +50,22 @@ public class Main {
 					
 					break;
 				case 2 :
+			
 				try {
 					clienteDAO.addCliente(ioc.ingresarCliente());
 				} catch (Throwable e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
 				    break;
 				case 3:
-					ioc.actualizarcliente();			
+				try {
+					ioc.actualizarcliente();
+				} catch (Throwable e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}			
 					break;
 				case 4:
 					ioc.borrarcliente();
