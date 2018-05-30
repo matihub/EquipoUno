@@ -10,12 +10,15 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
+import DAO.Interfaces.AerolineaDAO;
 import DAO.Interfaces.ClienteDAO;
 import DAO.Interfaces.ProvinciaDAO;
+import Factory.AerolineaFactory;
 import Factory.ClienteFactory;
 import Factory.ProvinciaFactory;
 import Vista.EntradaSalida;
 import Modelo.Aerolinea;
+import Modelo.Alianza;
 import Modelo.Cliente;
 import Modelo.Direccion;
 import Modelo.PasajeroFrecuente;
@@ -33,6 +36,7 @@ public class IOCliente {
 	Cliente cl = new Cliente();
 	ClienteDAO clienteDAO = new ClienteFactory().getImplementation("String");
 	ProvinciaDAO ProvinciaDAO = new ProvinciaFactory().getImplementation("String");
+	AerolineaDAO aerdao = new AerolineaFactory().getImplementation("String");
 	public void consultarCliente (int dni ) throws ParseException{
 		try {
 			   cliList = clienteDAO.getAllCliente();
@@ -56,7 +60,7 @@ public class IOCliente {
 	}
 	
 	
-	public void actualizarcliente() throws FileNotFoundException, IOException {
+	public void actualizarcliente() throws Exception, Throwable {
 		
 		
 		int dni = es.leerInt("ingrese dni a buscar", "dni invalido");
@@ -65,7 +69,7 @@ public class IOCliente {
 		for (int i = 0; i < cliList.size(); i++) {
 			if (cliList.get(i).getDni().equals((dni))) {
 				
-				cliList.set(i, ingresarCliente());
+				cliList.set(i,ingresarCliente());
 			}
 		}
 		clienteDAO.modifyCliente(cliList);
@@ -171,7 +175,7 @@ public class IOCliente {
     	psjf.setCategoria(es.leerFrase("ingresar categoria"));
     	aer = ingresarAerolinea();
     	psjf.setLineaaerea(aer);
-    	psjf.setAlianza(ingresealianza(aer.getAlianza())); 
+    	psjf.setAlianza(recuperararalianza(aer.getNombre())); 
     	
     	
 		return psjf;
@@ -188,7 +192,20 @@ public class IOCliente {
 	}
 
 
-	public AlianzA recuperararalianza() {}
+	public String recuperararalianza(String aer) {
+		ArrayList<String> al =  new ArrayList<String>();
+				String alianza = "sin alianza";
+				al = aerdao.getalianza();
+				
+				for (int i = 0; i < al.size(); i++) {
+					String[] straux = al.get(i).split(";");	
+					if (straux[1].equals(aer)) {
+						alianza=straux[0];
+					}
+					
+				}
+		
+		return alianza;}
     
     
     

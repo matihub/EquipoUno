@@ -24,12 +24,7 @@ public class Main {
 		
 
 		IOMenu menu = new IOMenu();
-	//	Habitacion h[] =new Habitacion[10];
-
-	
-	//	IOHuesped  ioc = new IOHuesped();
-
-		
+			
 		int dni;
 		int opcion;
 		boolean fin = false;
@@ -40,7 +35,7 @@ public class Main {
 	//	VueloDAO vueloDAO = new VueloFactory().getImplementation("String");
 	//	VentaDAO ventaDAO = new VentaFactory().getImplementation("String");
 		IOCliente ioc = new IOCliente();
-	
+	    IOAerolinea ioa = new IOAerolinea();
 
 	
 		while(!fin){
@@ -69,7 +64,7 @@ public class Main {
 					break;
 				case 5:
 	
-		
+		            ioa.consultarAerolinea();
 					
 				case 6:
 					fin = true;

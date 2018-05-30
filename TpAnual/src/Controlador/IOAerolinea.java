@@ -22,7 +22,7 @@ public class IOAerolinea {
 	Aerolinea Aer = new Aerolinea();
 	AerolineaDAO AerolineaDAO = new AerolineaFactory().getImplementation("String");
 	
-	public void consultarAerolinea (int dni ) throws ParseException{
+	public void consultarAerolinea ( ) throws ParseException{
 		try {
 			   cliList = AerolineaDAO.getAllAerolinea();
 			   if (cliList.contains(null)){
