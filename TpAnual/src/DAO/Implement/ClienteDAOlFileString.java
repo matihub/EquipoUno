@@ -30,11 +30,16 @@ public class ClienteDAOlFileString implements ClienteDAO{
 	public boolean addCliente(Cliente cliente) throws FileNotFoundException, IOException {
 		boolean verif = true ; 
 		file = new File("C:\\archivos\\clientes.txt");
+		try{
 		fw = new FileWriter(file, true);
 		bw = new BufferedWriter(fw);
-		bw.write(this.ClienteToString(cliente));
+		bw.write(ClienteToString(cliente));
 		bw.close();
-	
+		fw.close();
+		}
+		catch (Exception e){
+			verif = false;
+		}
 		return verif;
 	}
 	
@@ -94,7 +99,8 @@ public class ClienteDAOlFileString implements ClienteDAO{
 	}
 	
 	private static String ClienteToString(Cliente cliente){
-		return cliente.getDni()+ ";" + cliente.getNombre() + ";" + cliente.getApellido() + ";" + cliente.getCuil() + ";" + cliente.getEmail() + ";" + cliente.getFechanac() + ";" + TelefonoToString(cliente.getTelefono()) + ";" + pasajerofrecuentetoStroing(cliente.getPsjfrec()) + ";" + cliente.getDireccion() + "\n";
+	//	return cliente.getDni()+ ";" + cliente.getNombre() + ";" + cliente.getApellido() + ";" + cliente.getCuil() + ";" + cliente.getEmail() + ";" + cliente.getFechanac() + ";" + TelefonoToString(cliente.getTelefono().getNrocelular()) + ";" + pasajerofrecuentetoStroing(cliente.getPsjfrec()) + ";" + cliente.getDireccion() + "\n";
+		return cliente.getDni()+ ";" + cliente.getNombre() + ";" + cliente.getApellido() + ";" + cliente.getCuil() + ";" + cliente.getEmail() + ";" + cliente.getFechanac() + ";" + TelefonoToString(cliente.getTelefono()) + ";" + pasajerofrecuentetoStroing(cliente.getPsjfrec()) + ";" + cliente.getDireccion().getCalle() + "\n";
 		
 	}
 	
@@ -103,8 +109,8 @@ public class ClienteDAOlFileString implements ClienteDAO{
 		
 	}
 	private static String pasajerofrecuentetoStroing(PasajeroFrecuente pjf){
-		return pjf.getAlianza()+";"+pjf.getCategoria()+";"+pjf.getNumero()+ "\n";
-		
+	//	return pjf.getAlianza()+";"+pjf.getCategoria()+";"+pjf.getNumero()+ "\n";
+		return pjf.getCategoria()+";"+pjf.getNumero()+ "\n";
 	}
 	
 	private static String DirecciontoStroing(Direccion dir){

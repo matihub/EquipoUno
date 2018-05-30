@@ -156,7 +156,7 @@ public class AerolineaDAOlFileString implements AerolineaDAO{
 		while(sc.hasNextLine()){
 			l.add(sc.nextLine());
 		}
-		return null;
+		return l;
 		
 		
 		

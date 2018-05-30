@@ -186,7 +186,15 @@ public class IOCliente {
          	Aerolinea aer = new Aerolinea();
 		    es.pritln("----seleccioner Aerolinea----");
 		    
-		      
+		    List<String> list = new ArrayList<String>();
+		      list = aerdao.aeroparametrica();
+		      for (int i = 0; i < list.size(); i++) {
+				es.pritln(i+"-"+list.get(i));
+			}
+		      int op = es.leerInt("ingrese numero de aerolinea elegida", "opcion invlaida");
+		      aer.setNombre(list.get(op));
+		      aer.setAlianza(recuperararalianza(list.get(op)));
+		 //     aer.setVuelo(vuelo);
 		return aer;
 	}
 
