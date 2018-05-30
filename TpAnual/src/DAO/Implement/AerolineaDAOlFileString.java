@@ -45,7 +45,7 @@ public class AerolineaDAOlFileString implements AerolineaDAO{
 	public boolean modifyAerolinea(Aerolinea aer ) {
 		// TODO Auto-generated method stub
 		
-		String ruta=("C:\\Aerolinea"+aer.getNombre()+".txt");
+		String ruta=("C:\\Aerolinea.txt");
 		//llama al writer y al buffer y escribe lo que se encuentra en cada posicion del array
 		
 	
@@ -104,7 +104,7 @@ public class AerolineaDAOlFileString implements AerolineaDAO{
 		Aerolinea Aerolinea = new Aerolinea();
 		Aerolinea.setNombre(straux[0]);
 		Aerolinea.setAlianza(straux[1]);
-		String[] straux2= straux[2].split("-");
+		
 		
 	//	Aerolinea.setVuelo(VueloDAOImpleFile.);
 		
@@ -144,7 +144,23 @@ public class AerolineaDAOlFileString implements AerolineaDAO{
 	
 	}
 
-
+	public ArrayList<String> aeroparametrica(){
+		ArrayList<String> l = new ArrayList<String>();
+		file = new File("C:\\Archivos\\Aerolineas.txt");
+		try {
+			sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		while(sc.hasNextLine()){
+			l.add(sc.nextLine());
+		}
+		return null;
+		
+		
+		
+	}
 
 
 	@Override

@@ -11,6 +11,8 @@ public interface AerolineaDAO {
 
 	public Aerolinea getAerolinea(int clie_id);
 	
+	public ArrayList<String> aeroparametrica();
+	
 	public Aerolinea buscarAerolinea();
 
 	public ArrayList<Aerolinea> getAerolineas();

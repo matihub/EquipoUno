@@ -3,13 +3,13 @@ package Modelo;
 public class Direccion {
 	
 	private String calle ;
-	private String altura;
+	private int altura;
 	private String ciudad;
 	private String provincia;
     private String pais;
     private int codigopostal;
     
-	public Direccion(String calle, String altura, String ciudad, String provincia, String pais, int codigopostal) {
+	public Direccion(String calle, int altura, String ciudad, String provincia, String pais, int codigopostal) {
 		super();
 		this.calle = calle;
 		this.altura = altura;
@@ -19,17 +19,21 @@ public class Direccion {
 		this.codigopostal = codigopostal;
 	}
 
+	public Direccion() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getCalle() {
 		return calle;
 	}
 	public void setCalle(String calle) {
 		this.calle = calle;
 	}
-	public String getAltura() {
+	public int getAltura() {
 		return altura;
 	}
-	public void setAltura(String altura) {
-		this.altura = altura;
+	public void setAltura(int i) {
+		this.altura = i;
 	}
 	public String getCiudad() {
 		return ciudad;

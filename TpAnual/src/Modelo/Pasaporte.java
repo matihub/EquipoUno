@@ -10,13 +10,13 @@ public class Pasaporte implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String nroPasaporte;
+	private int nroPasaporte;
 	private String nacionalidad;
 	private String sexoPers;
 	private String nombre;
 	private String apellido;
 	
-	public Pasaporte (String nroPasaporte, String nacionalidad, String sexoPers, String nombre, String apellido) {
+	public Pasaporte (int nroPasaporte, String nacionalidad, String sexoPers, String nombre, String apellido) {
 	super();
 	
 	this.nroPasaporte = nroPasaporte;
@@ -30,12 +30,12 @@ public class Pasaporte implements Serializable {
 		
 	}
 
-	public String getNroPasaporte() {
+	public int getNroPasaporte() {
 		return nroPasaporte;
 	}
 
-	public void setNroPasaporte(String nroPasaporte) {
-		this.nroPasaporte = nroPasaporte;
+	public void setNroPasaporte(int i) {
+		this.nroPasaporte = i;
 	}
 
 	public String getNacionalidad() {

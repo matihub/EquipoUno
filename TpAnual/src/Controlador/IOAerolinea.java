@@ -17,7 +17,7 @@ import Modelo.Aerolinea;
 public class IOAerolinea {
 	
 	EntradaSalida es = new EntradaSalida();
-	List <Aerolinea> cliList = new ArrayList<Aerolinea>();
+	List <Aerolinea> aerList = new ArrayList<Aerolinea>();
 	Aerolinea Aer = new Aerolinea();
 	AerolineaDAO AerolineaDAO = new AerolineaFactory().getImplementation("String");
 	
@@ -59,7 +59,14 @@ public class IOAerolinea {
 		AerolineaDAO.modifyAerolinea(cliList);
 		
 	}
-
+    
+	public void mostrarAerolineas() throws FileNotFoundException, IOException {
+		aerList = AerolineaDAO.getAllAerolinea();
+		for (int i = 0; i < aerList.size(); i++) {
+			es.pritln(i+"-"+aerList.get(i).getNombre());
+		}
+		
+	}
 
 	public Aerolinea ingresarAerolinea() {
 		// TODO Auto-generated method stub
@@ -112,7 +119,18 @@ public class IOAerolinea {
     	
     }
 
-
+     public int  mostrarAerolineastxt() {
+    	 int opcion =0;
+    		ArrayList<String> l = new ArrayList<String>();
+    	     l = AerolineaDAO.aeroparametrica();
+    	   es.pritln("seleccione numero de aerolinea");
+    	   es.pritln("     ----------------          ");
+    	   for (int i = 0; i < l.size(); i++) {
+			    es.pritln(i+"-"+l.get(i)+"/n"); 
+		}
+    	      opcion=es.leerInt("ingrese opcion", "opcion invalida");
+		return opcion;
+     }
 
 	
 }

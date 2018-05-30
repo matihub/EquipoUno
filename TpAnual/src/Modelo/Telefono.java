@@ -12,6 +12,10 @@ public class Telefono {
 		this.nrolaboral = nrolaboral;
 	}
 
+	public Telefono() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getNropersonal() {
 		return nropersonal;
 	}

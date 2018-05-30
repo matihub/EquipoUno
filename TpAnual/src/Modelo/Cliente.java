@@ -23,16 +23,14 @@ public class Cliente implements Serializable {
 	private Pasaporte nro_pasaporte;
 	
 
-	public Cliente(String nombre, String apellido, String dni, String cuil, PasajeroFrecuente psjfrec,
-			String calle, String altura,String  ciudad, String provincia, String pais, int codigopostal, String email, Calendar fechanac, Telefono telefono, Pasaporte nro_pasaporte) {
+	public Cliente(String nombre, String apellido, String dni, String cuil, PasajeroFrecuente psjfrec,Direccion direccion, int codigopostal, String email, Calendar fechanac, Telefono telefono, Pasaporte nro_pasaporte) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.dni = dni;
 		this.cuil = cuil;
 		this.psjfrec = psjfrec;
-	//	this.direccion = direccion;
-		Direccion dir = new Direccion(calle, altura, ciudad, provincia, pais, codigopostal);
+		this.direccion = direccion;
 		this.email = email;
 		this.fechanac = fechanac;
 		this.telefono = telefono;

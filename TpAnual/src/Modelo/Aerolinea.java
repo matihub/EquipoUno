@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Aerolinea {
   private static String nombre;
-  private String alianza;
+  private static String alianza;
   private List<Vuelo> vuelo;
   
   public Aerolinea(String nombre, String alianza, List<Vuelo> vuelo) {
