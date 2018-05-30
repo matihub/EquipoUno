@@ -54,7 +54,12 @@ public class Main {
 					
 					break;
 				case 2 :
+				try {
 					clienteDAO.addCliente(ioc.ingresarCliente());
+				} catch (Throwable e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				    break;
 				case 3:
 					ioc.actualizarcliente();			

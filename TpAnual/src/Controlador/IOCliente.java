@@ -78,7 +78,8 @@ public class IOCliente {
 		Cliente c = new Cliente();
 		int dni = es.leerInt("ingrese dni","ingrese dni valido");
 		String nombre = es.leerLinea("ingrese nombre");
-		String apellido = es.leerLinea("ingrese apellido");
+		String apellido = es.leerFrase("ingrese apellido");
+		String cuil = es.leerFrase("ingrese cuil");
 		Calendar fechanac = Calendar.getInstance();
 		es.pritln("ingrese fecha de nacimiento ");
 		int d= es.leerInt("Ingrese dia","ingrese dia valido");
@@ -94,8 +95,8 @@ public class IOCliente {
 		p.setApellido(apellido);
 		p.setNombre(nombre);
 		p.setNroPasaporte(es.leerInt("ingrese numero de pasaporte","pasaporte invalido"));
-		p.setSexoPers("ingrese sexo M/F");
-		p.setNacionalidad("ingrese nacionalidad");
+		p.setSexoPers(es.leerFrase("ingrese sexo M/F"));
+		p.setNacionalidad(es.leerFrase("ingrese nacionalidad"));
 		
 		
 		c.setDireccion(ingresardireccion());
@@ -103,8 +104,7 @@ public class IOCliente {
 		c.setApellido(apellido);
 		c.setNombre(nombre);
 		c.setDni(dni);
-		c.getCuil();
-		
+		c.setCuil(cuil);
 		c.setEmail(mail);
 		c.setFechanac(fechanac);
 		c.setNro_pasaporte(p);
@@ -149,7 +149,7 @@ public class IOCliente {
 			int opcion = es.leerInt("ingrese valor 1-23", "valor incorrecto");
 			   d.setProvincia(provList.get(opcion).getProvincia());
 		} else {
-              d.setProvincia("  ");
+              d.setProvincia(es.leerFrase("ingrese prov/estado/distrito"));
 		}
 		return d;
     }
@@ -197,7 +197,7 @@ public class IOCliente {
     		EntradaSalida.pritln("ingrese mail");
 		Scanner scan = new Scanner(System.in);
 		 String mail = scan.next();
-		while (!mail.matches("[a-zA-z]+([ '@]+[a-zA-z]+[.com])*")) {
+		while (mail.matches("[a-zA-z]+([ '@]+[a-zA-z]+[.com])*")) {
 			es.pritln("formato de mail incorrecto");
 			mail = scan.next();
 		}
