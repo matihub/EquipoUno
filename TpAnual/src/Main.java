@@ -37,7 +37,7 @@ public class Main {
 	//	VentaDAO ventaDAO = new VentaFactory().getImplementation("String");
 		IOCliente ioc = new IOCliente();
 	    IOAerolinea ioa = new IOAerolinea();
-//ultima version desde tasa
+//ultima version desde tasass
 	
 		while(!fin){
 	//desplega el menu de opciones a elegir de la clase IOmenu
