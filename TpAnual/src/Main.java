@@ -38,6 +38,12 @@ public class Main {
 		IOCliente ioc = new IOCliente();
 	    IOAerolinea ioa = new IOAerolinea();
 //ultima version desde tasass
+	    //agregar un aexcepcion en los close de los dao
+	    // generar la excepcion propia 
+	    //llamar al controller desde el menu 
+	    // fin de modificaciones 
+	    
+	    
 	
 		while(!fin){
 	//desplega el menu de opciones a elegir de la clase IOmenu
