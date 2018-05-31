@@ -23,7 +23,7 @@ public interface AerolineaDAO {
 
 	public boolean removeAerolinea(int clie_id);
 
-	public boolean modifyAerolinea(Aerolinea aer);
+	public boolean modifyAerolinea(List<Aerolinea> aerList);
 	
 	public int getTotalCount();
 

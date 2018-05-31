@@ -1,21 +1,19 @@
 package Factory;
 
-import DAO.Implement.AerolineaDAOImplFileStream;
-import DAO.Implement.AerolineaDAOlFileString;
-import DAO.Implement.VueloDAOImpleFile;
+import DAO.Implement.VentaDAOImpleFileString;
 import DAO.Implement.VueloDAOlFileString;
 
 public class VueloFactory {
 
-	public VueloDAOImpleFile getImplementation(String s) {
+	public VueloDAOlFileString getImplementation(String s) {
 
 		if(s.equals("fileString")){
 			return new VueloDAOlFileString();
 		}else if(s.equals("fileStream")){
-			return new VueloDAOImpleFile();
+			return new VueloDAOlFileString();
 		}
 		return null;
-	
-	
-
+	}
 }
+
+	

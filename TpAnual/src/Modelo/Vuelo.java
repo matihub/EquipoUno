@@ -63,7 +63,7 @@ public class Vuelo {
 	}
 
 	public Aerolinea getAerolinea() {
-		return aerolinea;
+		return getAerolinea();
 	}
 
 	public void setAerolinea(Aerolinea aerolinea) {

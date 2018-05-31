@@ -24,12 +24,12 @@ public class IOAerolinea {
 	
 	public void consultarAerolinea ( ) throws ParseException{
 		try {
-			   cliList = AerolineaDAO.getAllAerolinea();
-			   if (cliList.contains(null)){
+			   aerList = AerolineaDAO.getAllAerolinea();
+			   if (aerList.contains(null)){
 				   throw new Exception ("no existen Aerolinea");
 			   }else {
-				   for (int i = 0; i < cliList.size(); i++) {
-					    es.pritln(cliList.get(i).getNombre()+"\t"+cliList.get(i).getNombre()+"\t"+cliList.get(i).getCuil()+"\t"+cliList.get(i).getDni()+"\t"+cliList.get(i).getEmail()+"\t"+cliList.get(i));
+				   for (int i = 0; i < aerList.size(); i++) {
+					    es.pritln(aerList.get(i).getNombre()+"\t"+aerList.get(i).getNombre()+"\t"+aerList.get(i).getCuil()+"\t"+aerList.get(i).getDni()+"\t"+aerList.get(i).getEmail()+"\t"+aerList.get(i));
 					   
 				} 
 				  
@@ -49,15 +49,15 @@ public class IOAerolinea {
 		
 		
 		int dni = es.leerInt("ingrese dni a buscar", "dni invalido");
-		cliList = AerolineaDAO.getAllAerolinea();
+		aerList = AerolineaDAO.getAllAerolinea();
 		
-		for (int i = 0; i < cliList.size(); i++) {
-			if (cliList.get(i).getDni().equals((dni))) {
+		for (int i = 0; i < aerList.size(); i++) {
+			if (aerList.get(i).getDni().equals((dni))) {
 				
-				cliList.set(i, ingresarAerolinea());
+				aerList.set(i, ingresarAerolinea());
 			}
 		}
-		AerolineaDAO.modifyAerolinea(cliList);
+		AerolineaDAO.modifyAerolinea(aerList);
 		
 	}
     

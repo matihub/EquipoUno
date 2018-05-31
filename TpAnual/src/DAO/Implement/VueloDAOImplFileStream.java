@@ -15,7 +15,7 @@ public class VueloDAOImplFileStream implements VueloDAO {
 	
     private String root;
 
-    public VueloDAOImpleFile() {
+    public void VueloDAOImpleFileStream() {
         this.load();
     }
 

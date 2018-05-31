@@ -217,4 +217,14 @@ public class AerolineaDAOlFileString implements AerolineaDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+
+
+
+	@Override
+	public boolean modifyAerolinea(List<Aerolinea> aerList) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
