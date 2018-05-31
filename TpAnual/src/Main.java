@@ -37,7 +37,7 @@ public class Main {
 	//	VentaDAO ventaDAO = new VentaFactory().getImplementation("String");
 		IOCliente ioc = new IOCliente();
 	    IOAerolinea ioa = new IOAerolinea();
-
+//ultima version desde tasa
 	
 		while(!fin){
 	//desplega el menu de opciones a elegir de la clase IOmenu
@@ -52,12 +52,20 @@ public class Main {
 				case 2 :
 			
 				try {
-					clienteDAO.addCliente(ioc.ingresarCliente());
+					boolean verify = clienteDAO.addCliente(ioc.ingresarCliente());
+					 if (verify) {
+						   es.pritln("grabo correcto");
+						
+					}
+					   else{
+						   es.pritln("error al grabar");
+					   }
 				} catch (Throwable e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					
 				}
-				
+				  
 				    break;
 				case 3:
 				try {
@@ -74,7 +82,7 @@ public class Main {
 	
 		            ioa.consultarAerolinea();
 					
-				case 6:
+				case 15:
 					fin = true;
 					es.pritln("Fin del programa.");
 					break;			
