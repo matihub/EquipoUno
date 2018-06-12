@@ -7,7 +7,7 @@ public class MenuGeneral {
 	private static void  mostraropciones() throws Exception {
 		
 		boolean ok=false;
-		int opcion=0;
+		int option=0;
 		EntradaSalida.pritln("~~~~~~~~~~~~~~~~~~~~TP ANUAL ---VENTA DE VUELOS~~~~~~~~~~~~~~~~~~~~~~~");
 		EntradaSalida.pritln("~~~~~~~~~~~~~~~~~~~~TP ANUAL ---VENTA DE VUELOS~~~- MENU GENERAL -~~~");
 
@@ -36,12 +36,20 @@ public class MenuGeneral {
 
 		            	EntradaSalida.pritln("---------------");
 		            } else { if (option == 1) {
-	                    try {
-							MenuClientes.show();
-						} catch (Throwable e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+							try {
+								MenuClientes.show();
+							} catch (Throwable e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+	   	                    EntradaSalida.pritln("---------------");
+		            } else if (option == 2) {
+							try {
+								MenuVuelos.show();
+							} catch (Throwable e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 	   	                    EntradaSalida.pritln("---------------");
 
 	                } else {
@@ -51,5 +59,6 @@ public class MenuGeneral {
 		            }
 		    }
 }
+
 
 
