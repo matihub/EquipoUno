@@ -73,8 +73,25 @@ public class AerolineaDAOImplFileStream implements AerolineaDAO {
 		return null;
 	}
 
-	@Override
 	public boolean modifyAerolinea(Aerolinea aer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ArrayList<String> aeroparametrica() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<String> getalianza() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean modifyAerolinea(List<Aerolinea> aerList) {
 		// TODO Auto-generated method stub
 		return false;
 	}

@@ -8,12 +8,11 @@ public class EntradaSalida {
 		System.out.println(frase);
 	}
 	
-	public static int leerInt(String msjInicio, String msjError){
-		EntradaSalida.pritln(msjInicio);
+	public static int leerInt(String string, String string2){
 		Scanner scan = new Scanner(System.in);
 		while(!scan.hasNextInt()){
-			EntradaSalida.pritln(msjError);
-			scan.next();
+			EntradaSalida.pritln("Debe ingresar un entero");
+			scan.nextLine();
 		}
 		return scan.nextInt();
 	}

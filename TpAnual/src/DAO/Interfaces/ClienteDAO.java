@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sun.security.ntlm.Client;
+
 import Modelo.Cliente;
 
 public interface ClienteDAO {
@@ -26,6 +28,8 @@ public interface ClienteDAO {
 	public List<Cliente> getAllCliente() throws FileNotFoundException, IOException;
 
 	Cliente buscarCliente(String search);
+
+	public List<Client> findAll();
 
 }
 

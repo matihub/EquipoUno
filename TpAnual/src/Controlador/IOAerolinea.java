@@ -29,7 +29,7 @@ public class IOAerolinea {
 				   throw new Exception ("no existen Aerolinea");
 			   }else {
 				   for (int i = 0; i < aerList.size(); i++) {
-					    es.pritln(aerList.get(i).getNombre()+"\t"+aerList.get(i).getNombre()+"\t"+aerList.get(i).getCuil()+"\t"+aerList.get(i).getDni()+"\t"+aerList.get(i).getEmail()+"\t"+aerList.get(i));
+					    es.pritln(aerList.get(i).getNombre()+"\t"+aerList.get(i).getAlianza()+"\t"+aerList.get(i).getVuelo()+"\t"+aerList.get(i));
 					   
 				} 
 				  

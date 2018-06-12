@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.sun.security.ntlm.Client;
+
 import DAO.Interfaces.ClienteDAO;
 import Modelo.Cliente;
 import Modelo.Direccion;
@@ -193,6 +195,15 @@ public class ClienteDAOlFileString implements ClienteDAO{
 
 	@Override
 	public Cliente buscarCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	@Override
+	public List<Client> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

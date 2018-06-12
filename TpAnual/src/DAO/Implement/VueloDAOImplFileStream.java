@@ -2,6 +2,8 @@ package DAO.Implement;
 
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -117,4 +119,58 @@ public class VueloDAOImplFileStream implements VueloDAO {
 
         return status;
     }
+
+	@Override
+	public Vuelo getVuelo(int vue_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Vuelo buscarVuelo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Vuelo> getVuelos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addVuelo(Vuelo vue) throws FileNotFoundException, IOException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeVuelo(int vue_id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean modifyVuelo(Vuelo vue) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int getTotalCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Vuelo> getAllVuelo() throws FileNotFoundException, IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Vuelo buscarVuelo(String search) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

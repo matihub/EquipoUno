@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sun.security.ntlm.Client;
+
 import DAO.Interfaces.ClienteDAO;
 import Modelo.Cliente;
 
@@ -77,5 +79,11 @@ public class ClienteDAOImplFileStream implements ClienteDAO {
 	public boolean modifyCliente(List<Cliente> cli) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public List<Client> findAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

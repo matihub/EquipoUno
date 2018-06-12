@@ -38,4 +38,5 @@ public List<Vuelo> getVuelo() {
 public void setVuelo(List<Vuelo> vuelo) {
 	this.vuelo = vuelo;
 }
+
 }

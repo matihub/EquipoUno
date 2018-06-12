@@ -10,6 +10,8 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
+import com.sun.security.ntlm.Client;
+
 import DAO.Interfaces.AerolineaDAO;
 import DAO.Interfaces.ClienteDAO;
 import DAO.Interfaces.ProvinciaDAO;
@@ -227,6 +229,11 @@ public class IOCliente {
 		}
 		return mail;
     }
+    
+    public List<Client> findAll() {
+        return this.clienteDAO.findAll();
+    }
+    
 }
 
 

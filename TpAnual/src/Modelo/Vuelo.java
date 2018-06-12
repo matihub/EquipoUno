@@ -67,7 +67,6 @@ public class Vuelo {
 	}
 
 	public void setAerolinea(Aerolinea aerolinea) {
-		this.aerolinea = aerolinea;
 	}
 
 }
