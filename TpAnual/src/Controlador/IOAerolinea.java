@@ -48,11 +48,11 @@ public class IOAerolinea {
 	public void actualizarAerolinea() throws FileNotFoundException, IOException {
 		
 		
-		int dni = es.leerInt("ingrese dni a buscar", "dni invalido");
+		String nom= es.leerFrase("ingrese nombre");
 		aerList = AerolineaDAO.getAllAerolinea();
 		
 		for (int i = 0; i < aerList.size(); i++) {
-			if (aerList.get(i).getDni().equals((dni))) {
+			if (aerList.get(i).getNombre().equals((nom))) {
 				
 				aerList.set(i, ingresarAerolinea());
 			}

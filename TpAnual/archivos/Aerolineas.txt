@@ -1,0 +1,109 @@
+	
+	 Air Berlin
+	Niki
+	American Airlines
+	American Eagle
+	US Airways
+	 US Airways Express
+	US Airways Shuttle
+	 British Airways
+	BA CityFlyer
+	British Airways Limited
+	Comair
+	OpenSkies
+	 Sun-Air
+	Cathay Pacific
+	 Dragonair
+	 Finnair
+	Nordic Regional Airlines
+	Iberia
+	Air Nostrum
+	 Iberia Express
+	Iberia Regional
+	 Japan Airlines
+	J-Air
+	Japan Transocean Air
+	LAN Airlines
+	LAN Argentina
+	LAN Ecuador
+	LAN Express
+	LAN Peru
+	LAN Colombia
+	Malaysia Airlines
+	Qantas
+	Jetconnect
+	QantasLink
+	Qatar Airways
+	Royal Jordanian
+	 S7 Airlines
+	Globus Airlines
+	SriLankan Airlines
+	TAM Airlines
+  Aeroflot	
+  Aerolíneas Argentinas	
+  Austral Líneas Aéreas	
+  Aeromexico	
+  Aeroméxico Connect	
+  Air Europa	
+  Air France	
+  Alitalia	
+  China Airlines	
+  Mandarin Airlines	
+  China Eastern Airlines	
+  Shanghai Airlines	
+  China Southern Airlines	
+  Czech Airlines	
+  Delta Air Lines	
+  Delta Connection	
+  Delta Shuttle	
+  Garuda Indonesia	
+  Kenya Airways	
+  KLM	
+  KLM Cityhopper	
+  Korean Air	
+  Middle East Airlines	
+  Saudia	
+  TAROM	
+  Vietnam Airlines	
+  Xiamen Airlines	
+  Adria Airways	
+  Aegean Airlines	
+  Olympic Air	
+  Air Canada	
+  Air Canada Express	
+  Air Canada Rouge	
+  Air China	
+  Dalian Airlines	
+  Air India	
+  Air India Regional	
+  Air New Zealand	
+  Air New Zealand Link	
+  All Nippon Airways	
+  Asiana Airlines	
+  Austrian Airlines	
+  Avianca	
+  Avianca Brazil	
+  Avianca Costa Rica	
+  Avianca Ecuador	
+  Avianca El Salvador	
+  Avianca Guatemala	
+  Avianca Honduras	
+  Avianca Nicaragua	
+  Avianca Peru	
+  Brussels Airlines	
+  Copa Airlines	
+  Copa Airlines Colombia	
+  Croatia Airlines	
+  EgyptAir	
+  EgyptAir Express	
+  Air Sinai	
+  Ethiopian Airlines	
+  EVA Air	
+  Uni Air	
+  LOT Polish Airlines	
+  Lufthansa	
+  Air Dolomiti	
+  Lufthansa CityLine	
+  Lufthansa Regional	
+  Scandinavian Airlines	
+  Blue1	

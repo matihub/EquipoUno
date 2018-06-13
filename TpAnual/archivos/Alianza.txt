@@ -1,0 +1,109 @@
+		
+Oneworld	;	 Air Berlin
+Oneworld	;	Niki
+Oneworld	;	American Airlines
+Oneworld	;	American Eagle
+Oneworld	;	US Airways
+Oneworld	;	 US Airways Express
+Oneworld	;	US Airways Shuttle
+Oneworld	;	 British Airways
+Oneworld	;	BA CityFlyer
+Oneworld	;	British Airways Limited
+Oneworld	;	Comair
+Oneworld	;	OpenSkies
+Oneworld	;	 Sun-Air
+Oneworld	;	Cathay Pacific
+Oneworld	;	 Dragonair
+Oneworld	;	 Finnair
+Oneworld	;	Nordic Regional Airlines
+Oneworld	;	Iberia
+Oneworld	;	Air Nostrum
+Oneworld	;	 Iberia Express
+Oneworld	;	Iberia Regional
+Oneworld	;	 Japan Airlines
+Oneworld	;	J-Air
+Oneworld	;	Japan Transocean Air
+Oneworld	;	LAN Airlines
+Oneworld	;	LAN Argentina
+Oneworld	;	LAN Ecuador
+Oneworld	;	LAN Express
+Oneworld	;	LAN Peru
+Oneworld	;	LAN Colombia
+Oneworld	;	Malaysia Airlines
+Oneworld	;	Qantas
+Oneworld	;	Jetconnect
+Oneworld	;	QantasLink
+Oneworld	;	Qatar Airways
+Oneworld	;	Royal Jordanian
+Oneworld	;	 S7 Airlines
+Oneworld	;	Globus Airlines
+Oneworld	;	SriLankan Airlines
+Oneworld	;	TAM Airlines
+SkyTeam	;  Aeroflot	
+SkyTeam	;  Aerolíneas Argentinas	
+SkyTeam	;  Austral Líneas Aéreas	
+SkyTeam	;  Aeromexico	
+SkyTeam	;  Aeroméxico Connect	
+SkyTeam	;  Air Europa	
+SkyTeam	;  Air France	
+SkyTeam	;  Alitalia	
+SkyTeam	;  China Airlines	
+SkyTeam	;  Mandarin Airlines	
+SkyTeam	;  China Eastern Airlines	
+SkyTeam	;  Shanghai Airlines	
+SkyTeam	;  China Southern Airlines	
+SkyTeam	;  Czech Airlines	
+SkyTeam	;  Delta Air Lines	
+SkyTeam	;  Delta Connection	
+SkyTeam	;  Delta Shuttle	
+SkyTeam	;  Garuda Indonesia	
+SkyTeam	;  Kenya Airways	
+SkyTeam	;  KLM	
+SkyTeam	;  KLM Cityhopper	
+SkyTeam	;  Korean Air	
+SkyTeam	;  Middle East Airlines	
+SkyTeam	;  Saudia	
+SkyTeam	;  TAROM	
+SkyTeam	;  Vietnam Airlines	
+SkyTeam	;  Xiamen Airlines	
+Star Alliance	;  Adria Airways	
+Star Alliance	;  Aegean Airlines	
+Star Alliance	;  Olympic Air	
+Star Alliance	;  Air Canada	
+Star Alliance	;  Air Canada Express	
+Star Alliance	;  Air Canada Rouge	
+Star Alliance	;  Air China	
+Star Alliance	;  Dalian Airlines	
+Star Alliance	;  Air India	
+Star Alliance	;  Air India Regional	
+Star Alliance	;  Air New Zealand	
+Star Alliance	;  Air New Zealand Link	
+Star Alliance	;  All Nippon Airways	
+Star Alliance	;  Asiana Airlines	
+Star Alliance	;  Austrian Airlines	
+Star Alliance	;  Avianca	
+Star Alliance	;  Avianca Brazil	
+Star Alliance	;  Avianca Costa Rica	
+Star Alliance	;  Avianca Ecuador	
+Star Alliance	;  Avianca El Salvador	
+Star Alliance	;  Avianca Guatemala	
+Star Alliance	;  Avianca Honduras	
+Star Alliance	;  Avianca Nicaragua	
+Star Alliance	;  Avianca Peru	
+Star Alliance	;  Brussels Airlines	
+Star Alliance	;  Copa Airlines	
+Star Alliance	;  Copa Airlines Colombia	
+Star Alliance	;  Croatia Airlines	
+Star Alliance	;  EgyptAir	
+Star Alliance	;  EgyptAir Express	
+Star Alliance	;  Air Sinai	
+Star Alliance	;  Ethiopian Airlines	
+Star Alliance	;  EVA Air	
+Star Alliance	;  Uni Air	
+Star Alliance	;  LOT Polish Airlines	
+Star Alliance	;  Lufthansa	
+Star Alliance	;  Air Dolomiti	
+Star Alliance	;  Lufthansa CityLine	
+Star Alliance	;  Lufthansa Regional	
+Star Alliance	;  Scandinavian Airlines	
+Star Alliance	;  Blue1	

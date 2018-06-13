@@ -16,6 +16,9 @@ public class Ventas {
 		this.precioTotal = precioTotal;
 		this.cantPasajeros = cantPasajeros;
 	}
+	public Ventas() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getVentaNumero() {
 		return ventaNumero;
 	}
