@@ -1,5 +1,7 @@
 package Vista;
 
+import Controlador.IOVuelo;
+import Modelo.Vuelo;
 
 public class MenuVuelos {
 	
@@ -16,6 +18,54 @@ public class MenuVuelos {
     public static void show() throws Throwable{
         boolean fin = false;
         int option = 0;
+        
+        EntradaSalida es = new EntradaSalida();
+        
+        while(!fin) {
+        	
+        MenuVuelos.mostrarOpciones();
+        option = EntradaSalida.leerInt();
+        
+        if (option <1 || option >4) {
+        	es.pritln("Ingrese una opcion valida");
+        	continue;
+        	
+        }else {
+        	
+        	IOVuelo iov = new IOVuelo();
+        	
+         	while(!fin){
+   				
+    			switch(option){
+				case 1:
+					iov.consultarVuelo();
+					es.pritln("\nLeido.");
+					
+					break;
+					
+				case 2:
+					
+					iov.ingresarVuelo();
+					break;
+					
+				case 3:
+					
+					iov.actualizarVuelo();
+					
+					break;
+					
+				case 4:
+					
+					iov.borrarVuelo();
+					break;
+					
+					}
+        		
+        	}
+        }
+        	
+        }
+        
    
 }
 }
