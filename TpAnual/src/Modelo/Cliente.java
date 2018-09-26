@@ -40,6 +40,10 @@ public class Cliente implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Cliente(String nombre2, String apellido2, String email2, String telefono2, String email3, String direccion2,
+			String dni2, String nro_pasaporte2) {
+		// TODO Auto-generated constructor stub
+	}
 	public String getCuil() {
 		return cuil;
 	}

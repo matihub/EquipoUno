@@ -39,6 +39,17 @@ public class IOCliente {
 	ClienteDAO clienteDAO = new ClienteFactory().getImplementation("String");
 	ProvinciaDAO ProvinciaDAO = new ProvinciaFactory().getImplementation("String");
 	AerolineaDAO aerdao = new AerolineaFactory().getImplementation("String");
+	public IOCliente(String string, String text, String text2, String text3, String text4, String text5, String text6,
+			String text7, String text8) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public IOCliente() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public void consultarCliente (int dni ) throws ParseException{
 		try {
 			   cliList = clienteDAO.getAllCliente();
@@ -71,14 +82,14 @@ public class IOCliente {
 		for (int i = 0; i < cliList.size(); i++) {
 			if (cliList.get(i).getDni().equals((dni))) {
 				
-				cliList.set(i,ingresarCliente());
+			//	cliList.set(i,ingresarCliente());
 			}
 		}
 		clienteDAO.modifyCliente(cliList);
 		
 	}
 
-
+	/*
 	public Cliente ingresarCliente() throws Exception, Throwable {
 		// TODO Auto-generated method stub
 		Cliente c = new Cliente();
@@ -117,7 +128,28 @@ public class IOCliente {
 		es.pritln("nuevo cliente generado");
 		return c;
 	}
-
+  
+	*/
+	
+	public void ingresarClientebbd(String nombre, String apellido, String email, String telefono, String e, String direccion, String dni,
+			String nro_pasaporte) {
+		Cliente cl = new Cliente( nombre,  apellido,  email,  telefono,  e,  direccion,  dni,
+				 nro_pasaporte);
+		
+		try {
+			clienteDAO.addCliente(cl);
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+    	
+    	
+    	
+    } 
     public void borrarcliente() throws FileNotFoundException, IOException {
     	
     	int dni= es.leerInt("Ingresar dni a borrar", "dni invalido");
@@ -230,7 +262,7 @@ public class IOCliente {
 		return mail;
     }
     
-    public List<Client> findAll() {
+    public List<Cliente> findAll() {
         return this.clienteDAO.findAll();
     }
     

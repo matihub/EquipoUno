@@ -11,6 +11,10 @@ public class Avion {
 		this.modelo = modelo;
 	}
 
+	public Avion() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getNombre() {
 		return nombre;
 	}

@@ -14,6 +14,9 @@ public class Aeropuerto {
 		this.direccionAeropuerto = direccionAeropuerto;
 		this.telefonoAeropuerto = telefonoAeropuerto;
 	}
+	public Aeropuerto() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getNombreAeropuerto() {
 		return nombreAeropuerto;
 	}
