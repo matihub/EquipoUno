@@ -11,6 +11,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+
+
+import Controlola
 import DAO.Interfaces.AeropuertoDAO;
 import DAO.Interfaces.AvionDAO;
 import Modelo.Aeropuerto;
@@ -35,6 +38,8 @@ public class AvionAlta extends JPanel {
 
 		this.avionDAO = avidao;
 		this.aeropuertoDAO = aerodao;
+		
+		
 		
 		setLayout(null);
 		
