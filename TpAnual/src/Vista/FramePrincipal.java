@@ -15,7 +15,7 @@ import Controlador.IOCliente;
 import Controlador.IOVenta;
 import Controlador.IOVuelo;
 import DAO.Interfaces.*;
-import panels.*;
+//import panels.*;
 
 
 import java.awt.Font;
@@ -47,17 +47,17 @@ public class FramePrincipal extends JFrame implements ActionListener {
 
 	private IOCliente clienteDAO;
 	private IOAerolinea avionDAO;
-	private IOAerolinea aeropuertoDAO;
-	private IOVuelo vueloDAO;
-	private IOVenta ventaDAO;
+	private AeropuertoDAO aeropuertoDAO;
+	private VueloDAO vueloDAO;
+	private VentaDAO ventaDAO;
 
-	public FramePrincipal(IOCliente clidao,   IOAerolinea aerodao, IOVuelo vuedao, IOVenta vendao) {
+	public FramePrincipal(IOCliente clienteDAO2/*,   AeropuertoDAO aeropuertoDAO2, VueloDAO vueloDAO2, VentaDAO ventaDAO2*/) {
 
-		this.clienteDAO = clidao;
+		this.clienteDAO = clienteDAO2;
 	//	this.avionDAO = avidao;
-		this.aeropuertoDAO = aerodao;
-		this.vueloDAO = vuedao;
-		this.ventaDAO = vendao;
+	//	this.aeropuertoDAO = aeropuertoDAO2;
+	//	this.vueloDAO = vueloDAO2;
+//		this.ventaDAO = ventaDAO2;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 350, 300);
@@ -165,6 +165,11 @@ public class FramePrincipal extends JFrame implements ActionListener {
 		itemBuscarVentas.addActionListener(this);
 	}
 
+
+	public void FramePrincipal() {
+		// TODO Auto-generated constructor stub
+	}
+
 	private void refrescarPaneles() {
 		
 		getContentPane().add(contentPane);
@@ -186,25 +191,25 @@ public class FramePrincipal extends JFrame implements ActionListener {
 		
 		if (e.getSource().equals(itemBuscarClientes)) {
 			this.removerPaneles();
-			contentPane = new ClienteModificacionEliminacion(this.clienteDAO);
+//			contentPane = new ClienteModificacionEliminacion(this.clienteDAO);
 			this.refrescarPaneles();
 		} else if (e.getSource().equals(itemAltaCliente)) {
 			this.removerPaneles();
 			contentPane = new ClienteAlta(this.clienteDAO);
 			this.refrescarPaneles();
-		} else if (e.getSource().equals(itemListarClientes)) {
+		}/* else if (e.getSource().equals(itemListarClientes)) {
 			this.removerPaneles();
-			contentPane = new ClienteListado(this.clienteDAO);
+	//		contentPane = new ClienteListado(this.clienteDAO);
 			this.refrescarPaneles();
 		}
 		///////////
 		if (e.getSource().equals(itemBuscarAviones)) {
 			this.removerPaneles();
-			contentPane = new AvionModificacionEliminacion(this.avionDAO, this.aeropuertoDAO);
+		//	contentPane = new AvionModificacionEliminacion(this.avionDAO, this.aeropuertoDAO);
 			this.refrescarPaneles();
 		} else if (e.getSource().equals(itemAltaAvion)) {
 			this.removerPaneles();
-			contentPane = new AvionAlta(this.avionDAO, this.aeropuertoDAO);
+			//contentPane = new AvionAlta(this.avionDAO, this.aeropuertoDAO);
 			this.refrescarPaneles();
 		} else if (e.getSource().equals(itemListarAviones)) {
 			this.removerPaneles();
@@ -253,6 +258,7 @@ public class FramePrincipal extends JFrame implements ActionListener {
 			contentPane = new VentaListado(this.ventaDAO,this.vueloDAO,this.clienteDAO);
 			this.refrescarPaneles();
 		}
+		*/
 	}
 
 }

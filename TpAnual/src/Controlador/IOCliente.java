@@ -20,6 +20,7 @@ import Factory.ClienteFactory;
 import Factory.ProvinciaFactory;
 import Vista.EntradaSalida;
 import Modelo.Aerolinea;
+import Modelo.Aeropuerto;
 import Modelo.Alianza;
 import Modelo.Cliente;
 import Modelo.Direccion;
@@ -27,6 +28,7 @@ import Modelo.PasajeroFrecuente;
 import Modelo.Pasaporte;
 import Modelo.Provincia;
 import Modelo.Telefono;
+import Modelo.Vuelo;
 
 import java.util.Scanner;
 
@@ -36,9 +38,10 @@ public class IOCliente {
 	List <Cliente> cliList = new ArrayList<Cliente>();
 	List <Provincia> provList = new ArrayList<Provincia>();
 	Cliente cl = new Cliente();
-	ClienteDAO clienteDAO = new ClienteFactory().getImplementation("String");
-	ProvinciaDAO ProvinciaDAO = new ProvinciaFactory().getImplementation("String");
-	AerolineaDAO aerdao = new AerolineaFactory().getImplementation("String");
+	ClienteDAO clienteDAO = new ClienteFactory().getImplementation("jdbc");
+	ProvinciaDAO ProvinciaDAO = new ProvinciaFactory().getImplementation("jdbc");
+	AerolineaDAO aerdao = new AerolineaFactory().getImplementation("jdbc");
+	private List<Vuelo> vu;
 	public IOCliente(String string, String text, String text2, String text3, String text4, String text5, String text6,
 			String text7, String text8) {
 		// TODO Auto-generated constructor stub
@@ -131,21 +134,93 @@ public class IOCliente {
   
 	*/
 	
-	public void ingresarClientebbd(String nombre, String apellido, String email, String telefono, String e, String direccion, String dni,
-			String nro_pasaporte) {
+	public Boolean ingresarClientebbd(String nombre, String apellido, String email, String telefono, String e, String direccion, String dni,
+			String nro_pasaporte) throws FileNotFoundException, IOException
+	
+	{ System.out.println("paso por la bbd");
 		Cliente cl = new Cliente( nombre,  apellido,  email,  telefono,  e,  direccion,  dni,
 				 nro_pasaporte);
-		
-		try {
-			clienteDAO.addCliente(cl);
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		
+	  Direccion dir = new Direccion();
+	  dir.setCalle(direccion);
+	  dir.setAltura(1234);
+	  dir.setCiudad("jose c paz");
+	  dir.setCodigopostal(1665);
+	  dir.setPais("argentina");
+	  dir.setProvincia("bs as");
+	cl.setNombre(nombre);
+	System.out.println(cl.getNombre());
+	cl.setApellido(apellido);
+	System.out.println(cl.getApellido());
+	cl.setCuil(dni);
+	System.out.println(cl.getCuil());
+	cl.setDireccion(dir);
+	System.out.println(cl.getDireccion());
+	cl.setDni(dni);
+	System.out.println(cl.getDni());
+	cl.setEmail(email);
+	System.out.println(cl.getEmail());
+	Calendar fechanac = Calendar.getInstance();
+	fechanac.set(Calendar.DATE, 12);
+	fechanac.set(Calendar.MONTH, 8-1);
+	fechanac.set(Calendar.YEAR, 1987);
+	cl.setFechanac(fechanac);
+	System.out.println(cl.getFechanac().getCalendarType());
+	Pasaporte pas = new Pasaporte();
+	pas.setApellido(apellido);
+	pas.setNacionalidad("argentino");
+	pas.setNombre(nombre);
+	pas.setNroPasaporte(nro_pasaporte);
+	pas.setSexoPers("masculino");
+	cl.setNro_pasaporte(pas);
+	System.out.println(cl.getNro_pasaporte().getNroPasaporte());
+//	pas.getSexoPers(null);
+	PasajeroFrecuente psjf =  new PasajeroFrecuente();
+	psjf.setAlianza("alianza");
+	psjf.setCategoria("categoria");
+	psjf.setNumero("12");
+	Aerolinea aer = new Aerolinea();
+	aer.setAlianza("alainza");
+	aer.setNombre("lan");
+	System.out.println(aer.getNombre());
+	System.out.println(aer.getAlianza());
+	Vuelo v = new Vuelo();
+	v.setHoraLlegada("32");
+	v.setHoraSalida("13");
+	v.setLugarDestino("africa");
+	v.setLugarOrigen("bs as");
+	v.setNroVuelo("12");
+	Aeropuerto aerp = new Aeropuerto();
+	aerp.setCodigoAeropuerto(1243234);
+	aerp.setDireccionAeropuerto("asfdasf");
+	aerp.setNombreAeropuerto("asdfasf");
+	aerp.setTelefonoAeropuerto("1234124");
+	v.setAeropuerto(aerp);
+	//vu.add(v);
+
+    aer.setVuelo(vu);
+
+	psjf.setLineaaerea(aer);
+
+	cl.setPsjfrec(psjf);
+	System.out.println(cl.getPsjfrec());
+	Telefono tel =  new Telefono("1212", "1123233445", "12121212");
+	cl.setTelefono(tel);
+	System.out.println(cl.getTelefono());
+		System.out.println(cl.getNombre());
+		System.out.println(nombre);
+		System.out.println(cl.getApellido());
+		System.out.println(cl.getCuil());
+		System.out.println(cl.getDni());
+		System.out.println(cl.getEmail());
+		System.out.println(cl.getDireccion());
+		System.out.println(cl.getFechanac());
+		System.out.println(cl.getNro_pasaporte());
+		System.out.println(cl.getPsjfrec().getAlianza());
+		System.out.println(cl.getTelefono().getNrocelular());
+		//	clienteDAO.addCliente(cl);
+		//clienteDAO.addCliente(nombre, apellido, direccion, dni, telefono, nro_pasaporte, email)
+		clienteDAO.addCliente(cl.getNombre(),cl.getApellido(),cl.getDireccion().getCalle(),cl.getDni(),cl.getTelefono().getNrocelular(),cl.getNro_pasaporte().getNroPasaporte(),cl.getEmail());
+		return true;
     	
     	
     	

@@ -13,7 +13,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
+/*
 import negocio.objetos.Cliente;
 import negocio.objetos.Venta;
 import persistencia.dao.interfaces.ClienteDAO;
@@ -26,8 +26,9 @@ import presentacion.popup.PopUpError;
 import presentacion.popup.PopUpGeneral;
 import java.awt.Font;
 
+ */
 public class VentaAlta extends JPanel {
-
+/*
 	private static final long serialVersionUID = 100206553674159671L;
 
 	private VentaDAO ventaDAO;
@@ -142,4 +143,5 @@ public class VentaAlta extends JPanel {
 		}
 		return true;
 	}
+	*/
 }

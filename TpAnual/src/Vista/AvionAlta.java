@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 
 
 
-import Controlola
+import Controlador.IOAerolinea;
 import DAO.Interfaces.AeropuertoDAO;
 import DAO.Interfaces.AvionDAO;
 import Modelo.Aeropuerto;

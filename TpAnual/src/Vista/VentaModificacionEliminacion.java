@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
-
+/*
 import negocio.objetos.Cliente;
 import negocio.objetos.Venta;
 import negocio.objetos.Vuelo;
@@ -22,11 +22,17 @@ import presentacion.otros.Item;
 import presentacion.otros.ItemRenderer;
 import presentacion.popup.PopUpError;
 import presentacion.popup.PopUpGeneral;
-
+*/
 import java.awt.Font;
 
 public class VentaModificacionEliminacion extends JPanel implements ActionListener {
 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+/*
 	private static final long serialVersionUID = -960696045403411556L;
 	
 	private JTextField textFieldVentaID;
@@ -178,4 +184,5 @@ public class VentaModificacionEliminacion extends JPanel implements ActionListen
 		}
 		return true;
 	}
+	*/
 }

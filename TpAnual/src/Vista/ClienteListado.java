@@ -7,14 +7,20 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-import negocio.objetos.Cliente;
-import persistencia.dao.interfaces.ClienteDAO;
+//import negocio.objetos.Cliente;
+//import persistencia.dao.interfaces.ClienteDAO;
 
 import javax.swing.JTable;
 import java.awt.Font;
 
 public class ClienteListado extends JPanel implements ActionListener {
-	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+/*	
 	private static final long serialVersionUID = -8044390191183257340L;
 	
 	private ClienteDAO clienteDAO;
@@ -57,4 +63,5 @@ public class ClienteListado extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		
 	}
+	*/
 }

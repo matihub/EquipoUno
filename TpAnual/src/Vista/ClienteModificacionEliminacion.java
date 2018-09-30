@@ -9,16 +9,22 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
-
+/*
 import negocio.objetos.Cliente;
 import persistencia.dao.interfaces.ClienteDAO;
 import presentacion.popup.PopUpError;
 import presentacion.popup.PopUpGeneral;
-
+*/
 import java.awt.Font;
 
 public class ClienteModificacionEliminacion extends JPanel implements ActionListener {
 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+/*
 	private static final long serialVersionUID = -960696045403411556L;
 	
 	private JTextField textFieldClieID;
@@ -240,4 +246,5 @@ public class ClienteModificacionEliminacion extends JPanel implements ActionList
 		}
 		return true;
 	}
+	*/
 }

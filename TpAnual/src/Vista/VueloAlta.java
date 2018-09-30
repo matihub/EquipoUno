@@ -9,7 +9,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
+/*
 import negocio.objetos.Avion;
 import persistencia.dao.interfaces.AvionDAO;
 import persistencia.dao.interfaces.VueloDAO;
@@ -18,10 +18,11 @@ import presentacion.otros.Item;
 import presentacion.otros.ItemRenderer;
 import presentacion.popup.PopUpError;
 import presentacion.popup.PopUpGeneral;
+*/
 import java.awt.Font;
 
 public class VueloAlta extends JPanel {
-
+/*
 	private static final long serialVersionUID = 100206553674159671L;
 
 	private VueloDAO vueloDAO;
@@ -128,4 +129,5 @@ public class VueloAlta extends JPanel {
 		}
 		return true;
 	}
+	*/
 }

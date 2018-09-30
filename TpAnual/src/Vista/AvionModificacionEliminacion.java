@@ -11,18 +11,24 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
-
+/*
 import negocio.objetos.Aeropuerto;
 import negocio.objetos.Avion;
 import persistencia.dao.interfaces.AeropuertoDAO;
 import persistencia.dao.interfaces.AvionDAO;
 import presentacion.popup.PopUpError;
 import presentacion.popup.PopUpGeneral;
-
+*/
 import java.awt.Font;
 
 public class AvionModificacionEliminacion extends JPanel implements ActionListener {
 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+/*
 	private static final long serialVersionUID = -960696045403411556L;
 	
 	private JTextField textFieldAvionID;
@@ -211,4 +217,5 @@ public class AvionModificacionEliminacion extends JPanel implements ActionListen
 		}
 		return true;
 	}
+	*/
 }

@@ -8,22 +8,22 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
+import Controlador.IOAerolinea;
 import DAO.Interfaces.AeropuertoDAO;
 import Modelo.Aeropuerto;
 
 public class AeropuertoAlta extends JPanel {
-
+/*
 	private static final long serialVersionUID = 100206553674159671L;
 
-	private AeropuertoDAO aeropuertoDAO;
+	private IOCliente aeropuertoDAO;
 	
 	private JTextField nombre;
 	private JTextField pais;
 	private JButton aceptar;
 	private JButton cancelar;
 
-	public AeropuertoAlta(AeropuertoDAO aerodao) {
+	public AeropuertoAlta(IOcliente aerodao) {
 
 		this.aeropuertoDAO = aerodao;
 		
@@ -99,4 +99,5 @@ public class AeropuertoAlta extends JPanel {
 		}
 		return true;
 	}
+	*/
 }

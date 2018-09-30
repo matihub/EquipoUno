@@ -24,7 +24,7 @@ public class MenuVuelos {
         while(!fin) {
         	
         MenuVuelos.mostrarOpciones();
-        option = EntradaSalida.leerInt();
+      //  option//  //EntradaSalida.leerInt();
         
         if (option <1 || option >4) {
         	es.pritln("Ingrese una opcion valida");
