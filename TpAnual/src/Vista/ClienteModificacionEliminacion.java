@@ -2,6 +2,8 @@ package Vista;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -9,6 +11,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
+
+import Controlador.IOCliente;
+
 /*
 import negocio.objetos.Cliente;
 import persistencia.dao.interfaces.ClienteDAO;
@@ -24,13 +29,13 @@ public class ClienteModificacionEliminacion extends JPanel implements ActionList
 		// TODO Auto-generated method stub
 		
 	}
-/*
+
 	private static final long serialVersionUID = -960696045403411556L;
 	
 	private JTextField textFieldClieID;
 	private JButton btnBuscar;
 	
-	private ClienteDAO clienteDAO;
+	private IOCliente clienteController;
 	private JTextField nombre;
 	private JTextField apellido;
 	private JTextField email;
@@ -43,10 +48,10 @@ public class ClienteModificacionEliminacion extends JPanel implements ActionList
 	private JButton modificar;
 	
 	private int currentID = 0;
-
-	public ClienteModificacionEliminacion(ClienteDAO clienteDAO) {
+    
+	public ClienteModificacionEliminacion(IOCliente clienteController) {
 		
-		this.clienteDAO = clienteDAO;
+		this.clienteController = clienteController;
 		
 		setLayout(null);
 
@@ -200,24 +205,25 @@ public class ClienteModificacionEliminacion extends JPanel implements ActionList
 	// Metodo de borrar
 	private boolean borrarCliente() {
 
-		return this.clienteDAO.removeCliente(currentID);
+		return this.clienteController.removeCliente(currentID);
 	}
 
 	// Metodo de modificar
 	private boolean guardarDatos() {
 			
-		Cliente cliente = new Cliente();
-		
-		cliente.setId(currentID);
-		cliente.setNombre(nombre.getText());
-		cliente.setApellido(apellido.getText());
-		cliente.setEmail(email.getText());
-		cliente.setTelefono(telefono.getText());
-		cliente.setDireccion(direccion.getText());
-		cliente.setDni(dni.getText());
-		cliente.setNro_pasaporte(nro_pasaporte.getText());
+		IOCliente clienteControlador = new IOCliente();
+		System.out.println(nombre.getText());
+		try {
+			return clienteControlador.modifyCliente(nombre.getText(),apellido.getText(),email.getText(),
+					telefono.getText(),email.getText(),direccion.getText(),dni.getText(),nro_pasaporte.getText());
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 
-		return this.clienteDAO.modifyCliente(cliente);
+	
 	}
 
 	// Metodo de buscar/mostrar
@@ -246,5 +252,5 @@ public class ClienteModificacionEliminacion extends JPanel implements ActionList
 		}
 		return true;
 	}
-	*/
+	
 }
