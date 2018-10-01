@@ -225,6 +225,7 @@ public class ClienteModificacionEliminacion extends JPanel implements ActionList
 
 	
 	}
+	}
 
 	// Metodo de buscar/mostrar
 	private void traerDatos() {
