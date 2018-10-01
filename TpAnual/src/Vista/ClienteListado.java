@@ -39,19 +39,7 @@ public class ClienteListado extends JPanel implements ActionListener {
 	}
 
 	private void traerDatos() {
-/*
-		ArrayList<Cliente> clientes = this.clienteDAO.consultarCliente();
-			
-		Object columnNames[] = {"Nombre", "Apellido", "DNI"};
-		
-		for (int i = 0; i < clientes.size(); i++) {
-			rowData[i][0] = clientes.get(i).getNombre();
-			rowData[i][1] = clientes.get(i).getApellido();
-			rowData[i][2] = clientes.get(i).getDni();
-		}
-		*/
-	//	Object rowData[][] = new Object[clientes.size()][3];
-	//	Object rowData[][] = (Object) this.clienteDAO.findAll();
+
 		Object columnNames[] = {"Nombre", "Apellido", "DNI"};
 		table = new JTable(this.clienteDAO.findAll(),columnNames);
 		table.setFont(new Font("Calibri Light", Font.PLAIN, 11));
