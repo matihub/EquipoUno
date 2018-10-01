@@ -1,6 +1,7 @@
 package Vista;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -60,7 +61,9 @@ public class FramePrincipal extends JFrame implements ActionListener {
 //		this.ventaDAO = ventaDAO2;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 350, 300);
+	//	setBounds(100, 100, 350, 300);
+		setBounds(100, 100, 591, 403);
+		setBackground(Color.DARK_GRAY);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
