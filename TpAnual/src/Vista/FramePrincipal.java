@@ -14,7 +14,7 @@ import Controlador.IOAerolinea;
 import Controlador.IOCliente;
 import Controlador.IOVenta;
 import Controlador.IOVuelo;
-import DAO.Interfaces.*;
+//import DAO.Interfaces.*;
 //import panels.*;
 
 
@@ -47,9 +47,9 @@ public class FramePrincipal extends JFrame implements ActionListener {
 
 	private IOCliente clienteDAO;
 	private IOAerolinea avionDAO;
-	private AeropuertoDAO aeropuertoDAO;
-	private VueloDAO vueloDAO;
-	private VentaDAO ventaDAO;
+//	private AeropuertoDAO aeropuertoDAO;
+//	private VueloDAO vueloDAO;
+//	private VentaDAO ventaDAO;
 
 	public FramePrincipal(IOCliente clienteDAO2/*,   AeropuertoDAO aeropuertoDAO2, VueloDAO vueloDAO2, VentaDAO ventaDAO2*/) {
 
@@ -88,6 +88,36 @@ public class FramePrincipal extends JFrame implements ActionListener {
 		mnClientes.add(itemBuscarClientes);
 		itemBuscarClientes.addActionListener(this);
 
+		
+	}
+	
+
+	private void setContentPane(
+			JPanel contentPane) {
+		// TODO Auto-generated method stub
+		
+	}
+	public FramePrincipal(IOAerLineas AerolineaIO/*,   AeropuertoDAO aeropuertoDAO2, VueloDAO vueloDAO2, VentaDAO ventaDAO2*/) {
+
+		this.AerolineaIO = AerolineaIO;
+	//	this.avionDAO = avidao;
+	//	this.aeropuertoDAO = aeropuertoDAO2;
+	//	this.vueloDAO = vueloDAO2;
+//		this.ventaDAO = ventaDAO2;
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 350, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+
+	
+		itemBuscarClientes.addActionListener(this);
+
 		JMenu mnAvion = new JMenu("Aviones");
 		mnAvion.setFont(new Font("SimSun", Font.ITALIC, 15));
 		menuBar.add(mnAvion);
@@ -107,25 +137,30 @@ public class FramePrincipal extends JFrame implements ActionListener {
 		mnAvion.add(itemBuscarAviones);
 		itemBuscarAviones.addActionListener(this);
 
-		JMenu mnAeropuerto = new JMenu("Aeropuerto");
-		mnAeropuerto.setFont(new Font("SimSun", Font.ITALIC, 15));
-		menuBar.add(mnAeropuerto);
+		
+	}
+	
+	public FramePrincipal(IOvUELOS VuelosIO/*,   AeropuertoDAO aeropuertoDAO2, VueloDAO vueloDAO2, VentaDAO ventaDAO2*/) {
 
-		itemListarAeropuertos = new JMenuItem("Listado");
-		itemListarAeropuertos.setFont(new Font("SimSun", Font.ITALIC, 152));
-		mnAeropuerto.add(itemListarAeropuertos);
-		itemListarAeropuertos.addActionListener(this);
+		this.VuelosIO = VuelosIO;
+	//	this.avionDAO = avidao;
+	//	this.aeropuertoDAO = aeropuertoDAO2;
+	//	this.vueloDAO = vueloDAO2;
+//		this.ventaDAO = ventaDAO2;
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 350, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
 
-		itemAltaAeropuerto = new JMenuItem("Nuevo Aeropuerto");
-		itemAltaAeropuerto.setFont(new Font("SimSun", Font.ITALIC, 15));
-		mnAeropuerto.add(itemAltaAeropuerto);
-		itemAltaAeropuerto.addActionListener(this);
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
 
-		itemBuscarAeropuertos = new JMenuItem("Eliminar | Modificar");
-		itemBuscarAeropuertos.setFont(new Font("SimSun", Font.ITALIC, 15));
-		mnAeropuerto.add(itemBuscarAeropuertos);
-		itemBuscarAeropuertos.addActionListener(this);
-
+	
+		
+		
 		JMenu mnVuelos = new JMenu("Vuelos");
 		mnVuelos.setFont(new Font("SimSun", Font.ITALIC, 15));
 		menuBar.add(mnVuelos);
@@ -144,6 +179,27 @@ public class FramePrincipal extends JFrame implements ActionListener {
 		itemBuscarVuelos.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnVuelos.add(itemBuscarVuelos);
 		itemBuscarVuelos.addActionListener(this);
+
+		
+	}
+	
+	public FramePrincipal(IOVentas VentasIO/*,   AeropuertoDAO aeropuertoDAO2, VueloDAO vueloDAO2, VentaDAO ventaDAO2*/) {
+
+		this.VuelosIO = VuelosIO;
+	//	this.avionDAO = avidao;
+	//	this.aeropuertoDAO = aeropuertoDAO2;
+	//	this.vueloDAO = vueloDAO2;
+//		this.ventaDAO = ventaDAO2;
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 350, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
 
 		JMenu mnVentas = new JMenu("Ventas");
 		mnVentas.setFont(new Font("SimSun", Font.ITALIC, 15));
@@ -164,8 +220,13 @@ public class FramePrincipal extends JFrame implements ActionListener {
 		mnVentas.add(itemBuscarVentas);
 		itemBuscarVentas.addActionListener(this);
 	}
+	
 
-
+	private void setContentPane(
+			JPanel contentPane) {
+		// TODO Auto-generated method stub
+		
+	}
 	public void FramePrincipal() {
 		// TODO Auto-generated constructor stub
 	}
