@@ -37,7 +37,7 @@ public class Principal {
 
 	private void initialize() {
 
-	IOCliente clienteDAO = new IOCliente();
+	IOCliente clienteController = new IOCliente();
 //		AvionDAO avionDAO = new AvionFactory().getImplementation("String");
 		AeropuertoDAO aeropuertoDAO = new AeropuertoFactory().getImplementation("String");
 		VueloDAO vueloDAO = new VueloFactory().getImplementation("String");

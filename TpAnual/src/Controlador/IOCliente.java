@@ -75,7 +75,7 @@ public class IOCliente {
             	}
 	}
 	
-	public  void modifyCliente(String nombre, String apellido, String email, String telefono, String e, String direccion, String dni,
+	public  boolean modifyCliente(String nombre, String apellido, String email, String telefono, String e, String direccion, String dni,
 			String nro_pasaporte ) {
 		
 		System.out.println("paso por la bbd");
@@ -158,9 +158,8 @@ public class IOCliente {
 		System.out.println(cl.getNro_pasaporte());
 		System.out.println(cl.getPsjfrec().getAlianza());
 		System.out.println(cl.getTelefono().getNrocelular());
-		//	clienteDAO.addCliente(cl);
-		//clienteDAO.addCliente(nombre, apellido, direccion, dni, telefono, nro_pasaporte, email)
-		//modificar dao
+	
+		//agreagar metodo de updayte en  el dao
 		clienteDAO.modifyCliente(cl.getNombre(),cl.getApellido(),cl.getDireccion().getCalle(),cl.getDni(),cl.getTelefono().getNrocelular(),cl.getNro_pasaporte().getNroPasaporte(),cl.getEmail());
 		return true;
 		
@@ -168,6 +167,15 @@ public class IOCliente {
 		
 		
 	};
+    	
+	public  boolean removeCliente( String cliedni){
+		//Hacer dao
+		clienteDAO.deletecliente(cliedni);
+		return true;
+	}
+	
+	 
+	
 	
 	public void actualizarcliente() throws Exception, Throwable {
 		
@@ -318,7 +326,10 @@ public class IOCliente {
     	
     	
     } 
-    public void borrarcliente() throws FileNotFoundException, IOException {
+    
+
+	
+	public void borrarcliente() throws FileNotFoundException, IOException {
     	
     	int dni= es.leerInt("Ingresar dni a borrar", "dni invalido");
     	cliList= clienteDAO.getAllCliente();

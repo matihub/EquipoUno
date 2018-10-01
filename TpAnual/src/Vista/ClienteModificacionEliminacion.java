@@ -47,7 +47,7 @@ public class ClienteModificacionEliminacion extends JPanel implements ActionList
 	private JButton eliminar;
 	private JButton modificar;
 	
-	private int currentID = 0;
+	private String currentDNI ;
     
 	public ClienteModificacionEliminacion(IOCliente clienteController) {
 		
@@ -205,26 +205,16 @@ public class ClienteModificacionEliminacion extends JPanel implements ActionList
 	// Metodo de borrar
 	private boolean borrarCliente() {
 
-		return this.clienteController.removeCliente(currentID);
+		return this.clienteController.removeCliente(currentDNI);
 	}
 
 	// Metodo de modificar
 	private boolean guardarDatos() {
 			
-		IOCliente clienteControlador = new IOCliente();
-		System.out.println(nombre.getText());
-		try {
-			return clienteControlador.modifyCliente(nombre.getText(),apellido.getText(),email.getText(),
-					telefono.getText(),email.getText(),direccion.getText(),dni.getText(),nro_pasaporte.getText());
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
 	
-	}
+		System.out.println(nombre.getText());
+		return clienteController.modifyCliente(nombre.getText(),apellido.getText(),email.getText(),
+				telefono.getText(),email.getText(),direccion.getText(),dni.getText(),nro_pasaporte.getText());
 	}
 
 	// Metodo de buscar/mostrar
