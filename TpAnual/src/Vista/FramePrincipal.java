@@ -70,97 +70,97 @@ public class FramePrincipal extends JFrame implements ActionListener {
 		setJMenuBar(menuBar);
 
 		JMenu mnClientes = new JMenu("Clientes");
-		mnClientes.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		mnClientes.setFont(new Font("SimSun", Font.ITALIC, 15));
 		menuBar.add(mnClientes);
 
 		itemListarClientes = new JMenuItem("Consulta");
-		itemListarClientes.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemListarClientes.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnClientes.add(itemListarClientes);
 		itemListarClientes.addActionListener(this);
 
 		itemAltaCliente = new JMenuItem("Alta Clientes");
-		itemAltaCliente.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemAltaCliente.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnClientes.add(itemAltaCliente);
 		itemAltaCliente.addActionListener(this);
 
 		itemBuscarClientes = new JMenuItem("Eliminar | Modificar");
-		itemBuscarClientes.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemBuscarClientes.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnClientes.add(itemBuscarClientes);
 		itemBuscarClientes.addActionListener(this);
 
 		JMenu mnAvion = new JMenu("Aviones");
-		mnAvion.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		mnAvion.setFont(new Font("SimSun", Font.ITALIC, 15));
 		menuBar.add(mnAvion);
 
 		itemListarAviones = new JMenuItem("Listado");
-		itemListarAviones.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemListarAviones.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnAvion.add(itemListarAviones);
 		itemListarAviones.addActionListener(this);
 
 		itemAltaAvion = new JMenuItem("Alta Avion");
-		itemAltaAvion.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemAltaAvion.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnAvion.add(itemAltaAvion);
 		itemAltaAvion.addActionListener(this);
 
 		itemBuscarAviones = new JMenuItem("Eliminar | Modificar");
-		itemBuscarAviones.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemBuscarAviones.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnAvion.add(itemBuscarAviones);
 		itemBuscarAviones.addActionListener(this);
 
 		JMenu mnAeropuerto = new JMenu("Aeropuerto");
-		mnAeropuerto.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		mnAeropuerto.setFont(new Font("SimSun", Font.ITALIC, 15));
 		menuBar.add(mnAeropuerto);
 
 		itemListarAeropuertos = new JMenuItem("Listado");
-		itemListarAeropuertos.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemListarAeropuertos.setFont(new Font("SimSun", Font.ITALIC, 152));
 		mnAeropuerto.add(itemListarAeropuertos);
 		itemListarAeropuertos.addActionListener(this);
 
 		itemAltaAeropuerto = new JMenuItem("Nuevo Aeropuerto");
-		itemAltaAeropuerto.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemAltaAeropuerto.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnAeropuerto.add(itemAltaAeropuerto);
 		itemAltaAeropuerto.addActionListener(this);
 
 		itemBuscarAeropuertos = new JMenuItem("Eliminar | Modificar");
-		itemBuscarAeropuertos.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemBuscarAeropuertos.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnAeropuerto.add(itemBuscarAeropuertos);
 		itemBuscarAeropuertos.addActionListener(this);
 
 		JMenu mnVuelos = new JMenu("Vuelos");
-		mnVuelos.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		mnVuelos.setFont(new Font("SimSun", Font.ITALIC, 15));
 		menuBar.add(mnVuelos);
 
 		itemListarVuelos = new JMenuItem("Listado");
-		itemListarVuelos.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemListarVuelos.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnVuelos.add(itemListarVuelos);
 		itemListarVuelos.addActionListener(this);
 
 		itemAltaVuelo = new JMenuItem("Nuevo");
-		itemAltaVuelo.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemAltaVuelo.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnVuelos.add(itemAltaVuelo);
 		itemAltaVuelo.addActionListener(this);
 
 		itemBuscarVuelos = new JMenuItem("Eliminar | Modificar");
-		itemBuscarVuelos.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemBuscarVuelos.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnVuelos.add(itemBuscarVuelos);
 		itemBuscarVuelos.addActionListener(this);
 
 		JMenu mnVentas = new JMenu("Ventas");
-		mnVentas.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		mnVentas.setFont(new Font("SimSun", Font.ITALIC, 15));
 		menuBar.add(mnVentas);
 
 		itemListarVentas = new JMenuItem("Listado");
-		itemListarVentas.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemListarVentas.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnVentas.add(itemListarVentas);
 		itemListarVentas.addActionListener(this);
 
 		itemAltaVenta = new JMenuItem("Nuevo");
-		itemAltaVenta.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemAltaVenta.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnVentas.add(itemAltaVenta);
 		itemAltaVenta.addActionListener(this);
 
 		itemBuscarVentas = new JMenuItem("Eliminar | Modificar");
-		itemBuscarVentas.setFont(new Font("Calibri Light", Font.PLAIN, 12));
+		itemBuscarVentas.setFont(new Font("SimSun", Font.ITALIC, 15));
 		mnVentas.add(itemBuscarVentas);
 		itemBuscarVentas.addActionListener(this);
 	}
