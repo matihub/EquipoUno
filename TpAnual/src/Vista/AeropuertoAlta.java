@@ -13,7 +13,7 @@ import DAO.Interfaces.AeropuertoDAO;
 import Modelo.Aeropuerto;
 
 public class AeropuertoAlta extends JPanel {
-/*
+
 	private static final long serialVersionUID = 100206553674159671L;
 
 	private IOCliente aeropuertoDAO;
@@ -99,5 +99,5 @@ public class AeropuertoAlta extends JPanel {
 		}
 		return true;
 	}
-	*/
+	
 }

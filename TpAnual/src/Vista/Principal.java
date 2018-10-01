@@ -39,7 +39,7 @@ public class Principal {
 		
 		frame = new FramePrincipal(clienteController);
 	//	frame = new FramePrincipal1();
-		frame.setBounds(100, 100, 355, 400);
+		frame.setBounds(100, 100, 591, 403);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
