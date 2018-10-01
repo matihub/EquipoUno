@@ -5,14 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 
 import Controlador.IOCliente;
-import DAO.Interfaces.AeropuertoDAO;
-import DAO.Interfaces.ClienteDAO;
-import DAO.Interfaces.VentaDAO;
-import DAO.Interfaces.VueloDAO;
-import Factory.AeropuertoFactory;
-import Factory.ClienteFactory;
-import Factory.VentaFactory;
-import Factory.VueloFactory;
+
+;
 public class Principal {
 
 	private JFrame frame;
@@ -39,11 +33,11 @@ public class Principal {
 
 	IOCliente clienteController = new IOCliente();
 //		AvionDAO avionDAO = new AvionFactory().getImplementation("String");
-		AeropuertoDAO aeropuertoDAO = new AeropuertoFactory().getImplementation("String");
-		VueloDAO vueloDAO = new VueloFactory().getImplementation("String");
-		VentaDAO ventaDAO = new VentaFactory().getImplementation("String");
+		//AeropuertoDAO aeropuertoDAO = new AeropuertoFactory().getImplementation("String");
+	//	VueloDAO vueloDAO = new VueloFactory().getImplementation("String");
+	//	VentaDAO ventaDAO = new VentaFactory().getImplementation("String");
 		
-		frame = new FramePrincipal(clienteDAO);
+		frame = new FramePrincipal(clienteController);
 	//	frame = new FramePrincipal1();
 		frame.setBounds(100, 100, 355, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
