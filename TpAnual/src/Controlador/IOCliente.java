@@ -337,8 +337,22 @@ public class IOCliente {
 		return mail;
     }
     
-    public List<Cliente> findAll() {
-        return this.clienteDAO.findAll();
+    public Object[][] findAll() {
+    	System.out.println("--------------------------PAAAASOOOOOOO---------------------------------------------");
+		
+    	ArrayList<Cliente> clientes = this.clienteDAO.getClientes();
+		
+		Object rowData[][] = new Object[clientes.size()][3];
+		System.out.println("--------------------------PAAAASOOOOOOO---------------------------------------------");
+		Object columnNames[] = {"Nombre", "Apellido", "DNI"};
+		
+		for (int i = 0; i < clientes.size(); i++) {
+			rowData[i][0] = clientes.get(i).getNombre();
+			rowData[i][1] = clientes.get(i).getApellido();
+			rowData[i][2] = clientes.get(i).getDni();
+		}
+    	
+        return rowData;
     }
     
 }

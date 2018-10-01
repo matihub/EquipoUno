@@ -197,11 +197,12 @@ public class FramePrincipal extends JFrame implements ActionListener {
 			this.removerPaneles();
 			contentPane = new ClienteAlta(this.clienteDAO);
 			this.refrescarPaneles();
-		}/* else if (e.getSource().equals(itemListarClientes)) {
+		} else if (e.getSource().equals(itemListarClientes)) {
 			this.removerPaneles();
-	//		contentPane = new ClienteListado(this.clienteDAO);
+			contentPane = new ClienteListado(this.clienteDAO);
 			this.refrescarPaneles();
 		}
+		/*
 		///////////
 		if (e.getSource().equals(itemBuscarAviones)) {
 			this.removerPaneles();

@@ -11,6 +11,9 @@ import javax.swing.JScrollPane;
 //import persistencia.dao.interfaces.ClienteDAO;
 
 import javax.swing.JTable;
+
+import Controlador.IOCliente;
+
 import java.awt.Font;
 
 public class ClienteListado extends JPanel implements ActionListener {
@@ -20,13 +23,13 @@ public class ClienteListado extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		
 	}
-/*	
+
 	private static final long serialVersionUID = -8044390191183257340L;
 	
-	private ClienteDAO clienteDAO;
+	private IOCliente clienteDAO;
 	private JTable table;
 
-	public ClienteListado(ClienteDAO clienteDAO) {
+	public ClienteListado(IOCliente clienteDAO) {
 		
 		this.clienteDAO = clienteDAO;
 		
@@ -36,10 +39,9 @@ public class ClienteListado extends JPanel implements ActionListener {
 	}
 
 	private void traerDatos() {
-
-		ArrayList<Cliente> clientes = this.clienteDAO.getClientes();
+/*
+		ArrayList<Cliente> clientes = this.clienteDAO.consultarCliente();
 			
-		Object rowData[][] = new Object[clientes.size()][3];
 		Object columnNames[] = {"Nombre", "Apellido", "DNI"};
 		
 		for (int i = 0; i < clientes.size(); i++) {
@@ -47,7 +49,11 @@ public class ClienteListado extends JPanel implements ActionListener {
 			rowData[i][1] = clientes.get(i).getApellido();
 			rowData[i][2] = clientes.get(i).getDni();
 		}
-		table = new JTable(rowData,columnNames);
+		*/
+	//	Object rowData[][] = new Object[clientes.size()][3];
+	//	Object rowData[][] = (Object) this.clienteDAO.findAll();
+		Object columnNames[] = {"Nombre", "Apellido", "DNI"};
+		table = new JTable(this.clienteDAO.findAll(),columnNames);
 		table.setFont(new Font("Calibri Light", Font.PLAIN, 11));
 		table.setEnabled(false);
 		table.setBounds(0, 0, 330, 300);
@@ -58,10 +64,6 @@ public class ClienteListado extends JPanel implements ActionListener {
 		add(scrollPane);
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-	*/
+
+	
 }
