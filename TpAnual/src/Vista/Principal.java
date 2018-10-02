@@ -21,7 +21,7 @@ public class Principal {
 			public void run() {
 				try {
 					Principal ventanaPrincipal = new Principal();
-					//ventanaPrincipal.frame.setVisible(true);
+					ventanaPrincipal.frame.setVisible(true);
 					
 				} catch (Exception e) {
 					e.printStackTrace();
