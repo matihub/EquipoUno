@@ -22,14 +22,6 @@ public class Vuelo {
 	
 	private Aeropuerto aeropuerto;
 
-	public Aeropuerto getAeropuerto() {
-		return aeropuerto;
-	}
-
-	public void setAeropuerto(Aeropuerto aeropuerto) {
-		this.aeropuerto = aeropuerto;
-	}
-
 	public String getNroVuelo() {
 		return nroVuelo;
 	}
@@ -70,6 +62,11 @@ public class Vuelo {
 		this.lugarOrigen = lugarOrigen;
 	}
 
+	public Aerolinea getAerolinea() {
+		return getAerolinea();
+	}
 
+	public void setAerolinea(Aerolinea aerolinea) {
+	}
 
 }

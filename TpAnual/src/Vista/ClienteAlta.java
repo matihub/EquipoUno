@@ -2,9 +2,6 @@ package Vista;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Scanner;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -12,10 +9,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import Controlador.IOCliente;
-//import negocio.objetos.Cliente;
-//import persistencia.dao.interfaces.ClienteDAO;
-//import presentacion.popup.PopUpError;
-//import presentacion.popup.PopUpGeneral;
+import negocio.objetos.Cliente;
+import persistencia.dao.interfaces.ClienteDAO;
+import presentacion.popup.PopUpError;
+import presentacion.popup.PopUpGeneral;
 import java.awt.Font;
 
 public class ClienteAlta extends JPanel {
@@ -32,13 +29,11 @@ public class ClienteAlta extends JPanel {
 	private JTextField direccion;
 	private JButton aceptar;
 	private JButton cancelar;
-	
 
-	public ClienteAlta(IOCliente clienteDAO) {
+	public ClienteAlta(ClienteDAO clienteDAO) {
 
-		//this.clienteDAO = clienteDAO;
+		this.clienteDAO = clienteDAO;
 		
-	
 		setLayout(null);
 		
 		JLabel lblNombre = new JLabel("Nombre *");
@@ -122,40 +117,22 @@ public class ClienteAlta extends JPanel {
 		aceptar.setFont(new Font("Calibri Light", Font.PLAIN, 11));
 		aceptar.setBounds(27, 240, 138, 23);
 		aceptar.addActionListener(new ActionListener() {
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			new PopUpError("paso2");	
-			if (verificarCampos()) {
-				new PopUpError("paso3");
-			//		if (guardarDatos()) {
-				try {
-					if(clienteDAO.ingresarClientebbd(nombre.getText(),apellido.getText(),email.getText(),
-							telefono.getText(),email.getText(),direccion.getText(),dni.getText(),nro_pasaporte.getText())) {
-						
-						
-							new PopUpError("paso5");
-							new PopUpGeneral("Cliente guardado exitosamente");
-							vaciarCampos();
-						} else {
-							new PopUpError("paso4");
-							new PopUpError("Ha ocurrido un error");
-						}
-				} catch (FileNotFoundException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-					new PopUpError("paso7");
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (verificarCampos()) {
+					if (guardarDatos()) {
+						new PopUpGeneral("Cliente guardado exitosamente");
+						vaciarCampos();
+					} else {
+						new PopUpError("Ha ocurrido un error");
+					}
 				} else {
 					new PopUpError("Debe completar todos los campos obligatorios (*)");
 				}
 			}
-	
 		});
 		add(aceptar);
-		new PopUpError("paso1");
+		
 		cancelar = new JButton("Cancelar");
 		cancelar.setFont(new Font("Calibri Light", Font.PLAIN, 11));
 		cancelar.setBounds(177, 240, 136, 23);
@@ -177,17 +154,8 @@ public class ClienteAlta extends JPanel {
 		 
 		
 		IOCliente clienteControlador = new IOCliente();
-		System.out.println(nombre.getText());
-		try {
-			return clienteControlador.ingresarClientebbd(nombre.getText(),apellido.getText(),email.getText(),
-					telefono.getText(),email.getText(),direccion.getText(),dni.getText(),nro_pasaporte.getText());
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		clienteControlador.ingresarClientebbd(nombre.getText(),apellido.getText(),email.getText(),
+				telefono.getText(),email.getText(),direccion.getText(),dni.getText(),nro_pasaporte.getText());
 		/*
 		Cliente cliente = new Cliente();
 		
@@ -203,29 +171,12 @@ public class ClienteAlta extends JPanel {
 		
 		
 		*/
-	//	return this.clienteDAO.addCliente(cliente);
-		return false;
 	}
 
 	private boolean verificarCampos() {
 		if (nombre.getText().isEmpty() || apellido.getText().isEmpty() || email.getText().isEmpty() || dni.getText().isEmpty()) {
 			return false;
 		}
-		
-	if (validarmail(email.getText())) {}
 		return true;
 	}
-	
-	  public boolean validarmail(String mail) {
-	    	
-
-		boolean mailcheck = true;
-		
-		if (mail.matches("[a-zA-z]+([ '@]+[a-zA-z]+[.com])*")) {
-			new PopUpError("formato de mail incorrecto");
-			mailcheck =false;
-			
-		}
-		return mailcheck;
-  }
 }

@@ -3,7 +3,6 @@ package Modelo;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.TimeZone;
 
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
@@ -60,7 +59,9 @@ public class Cliente implements Serializable {
 	public Calendar getFechanac() {
 		return fechanac;
 	}
-	
+	public void setFechanac(Calendar fechanac2) {
+		this.fechanac = fechanac2;
+	}
 	public void setDireccion(Direccion direccion) {
 		this.direccion = direccion;
 	}
@@ -102,13 +103,7 @@ public class Cliente implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public void setDni(String dni2) {
-		this.dni = dni2;
-		// TODO Auto-generated method stub
-		
-	}
-	public void setFechanac(Calendar fec) {
-		this.fechanac = fec;
+	public void setDni(int parseInt) {
 		// TODO Auto-generated method stub
 		
 	}

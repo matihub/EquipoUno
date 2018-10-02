@@ -27,7 +27,7 @@ public class IOVuelo {
 				   throw new Exception ("no existen Vuelo");
 			   }else {
 				   for (int i = 0; i < VueloList.size(); i++) {
-					    es.pritln(VueloList.get(i).getNroVuelo()+"\t"+VueloList.get(i).getLugarOrigen()+"\t"+VueloList.get(i).getLugarDestino()+"\t"+VueloList.get(i).getHoraSalida()+"\t"+VueloList.get(i).getHoraLlegada());
+					    es.pritln(VueloList.get(i).getNroVuelo()+"\t"+VueloList.get(i).getLugarOrigen()+"\t"+VueloList.get(i).getLugarDestino()+"\t"+VueloList.get(i).getHoraSalida()+"\t"+VueloList.get(i).getHoraLlegada()+"\t"+VueloList.get(i).getAerolinea().getNombre());
 					   
 				} 
 				  
@@ -67,7 +67,7 @@ public class IOVuelo {
 			es.pritln(i+"-"+VueloList.get(i).getLugarDestino());
 			es.pritln(i+"-"+VueloList.get(i).getHoraSalida());
 			es.pritln(i+"-"+VueloList.get(i).getHoraLlegada());
-		
+			es.pritln(i+"-"+VueloList.get(i).getAerolinea().getNombre());
 		}
 		
 	}
@@ -81,7 +81,7 @@ public class IOVuelo {
         a.setLugarDestino(es.leerFrase("ingrese destino"));
         a.setHoraSalida(es.leerFrase("ingrese hora de salida de Vuelo"));
 		a.setHoraLlegada(es.leerFrase("ingrese hora de llegada"));
-	
+		a.setAerolinea(ioa.ingresarAerolinea());
 		
 			
 		

@@ -50,10 +50,8 @@ public class MenuClientes {
     				case 2 :
     			
     				try {
-    		//			boolean verify = clienteDAO.addCliente(ioc.ingresarCliente());
-    			//		 if (verify) {
-    						 if (true) {
-    							    
+    					boolean verify = clienteDAO.addCliente(ioc.ingresarCliente());
+    					 if (verify) {
     						 EntradaSalida.pritln("grabo correcto");
     						
     					}

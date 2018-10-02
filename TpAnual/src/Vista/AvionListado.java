@@ -6,27 +6,21 @@ import java.util.ArrayList;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import Controlador.IOVuelo;
-//import negocio.objetos.Avion;
-//import persistencia.dao.interfaces.AvionDAO;
+
+import negocio.objetos.Avion;
+import persistencia.dao.interfaces.AvionDAO;
 
 import javax.swing.JTable;
 import java.awt.Font;
 
 public class AvionListado extends JPanel implements ActionListener {
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-/*	
+	
 	private static final long serialVersionUID = -8044390191183257340L;
 	
 	private AvionDAO avionDAO;
 	private JTable table;
 
-	public AvionListado(IOVuelo avionDAO) {
+	public AvionListado(AvionDAO avionDAO) {
 		
 		this.avionDAO = avionDAO;
 		
@@ -63,5 +57,4 @@ public class AvionListado extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		
 	}
-	*/
 }
