@@ -64,9 +64,11 @@ public class FramePrincipal extends JFrame implements ActionListener {
 	//	setBounds(100, 100, 350, 300);
 		setBounds(100, 100, 591, 403);
 		setBackground(Color.DARK_GRAY);
+		getContentPane().setBackground(Color.GRAY);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
+
 		setContentPane(contentPane);
 
 		JMenuBar menuBar = new JMenuBar();
