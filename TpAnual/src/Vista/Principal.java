@@ -27,8 +27,10 @@ public class Principal {
 
 			public void run() {
 				try {
+					System.out.println("inciandooooooooooo");
 					Principal ventanaPrincipal = new Principal();
 					ventanaPrincipal.frame.setVisible(true);
+			
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -101,10 +103,10 @@ public class Principal {
 	setContentPane(contentPane);
 	
 	//-fin
-		frame = new FramePrincipal(clienteController);
+	//	frame = new FramePrincipal(clienteController);
 	//	frame = new FramePrincipal1();
-		frame.setBounds(100, 100, 591, 403);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setBounds(100, 100, 591, 403);
+	//	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
 		
@@ -150,4 +152,5 @@ public void actionPerformed(ActionEvent e) {
 }
 		
 		}
+		
 }
